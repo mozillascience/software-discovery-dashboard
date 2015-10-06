@@ -9,7 +9,5 @@
 
 [EtherPad](https://etherpad-mozilla.org/sciencelab-sdd)
 
-https://drive.google.com/folderview?id=0B_kNLNI7Rky0fl9hZE9xZF9GV3FVSHVqdjVSV0tONDhlV2JRcWhEZWx3cDdQaXpNY2U1SEk&usp=sharing
-
 [Team Website](http://mozillascience.github.io/software-discovery-dashboard/)
 
