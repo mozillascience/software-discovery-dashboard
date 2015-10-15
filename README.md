@@ -10,4 +10,3 @@
 [EtherPad](https://etherpad-mozilla.org/sciencelab-sdd)
 
 [Team Website](http://mozillascience.github.io/software-discovery-dashboard/)
-

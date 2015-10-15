@@ -19,8 +19,8 @@ gulp.task('liveResetting', function() {
   return nodemon({
     script: 'build/bin/www',
     ext: 'js jade css',
-    stdout: false,
-    watch: ['build/'] 
+    watch: ['build/'],
+    stdout: false 
   }).on('readable', function () {
     this.stdout.on('data', function (chunk) {
       if(/^Express server listening on port/.test(chunk)){
@@ -46,7 +46,7 @@ gulp.task('moveViews', function() {
 gulp.task('sassBuild', function() {
   return sass('public/stylesheets/**/*.scss')
     .pipe(cache('sassBuild'))
-    .pipe(gulp.dest('build/public/css'));
+    .pipe(gulp.dest('build/public/stylesheets'));
 });
 
 gulp.task('jsBuild', function() {
