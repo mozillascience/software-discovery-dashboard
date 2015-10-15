@@ -1,1 +1,5 @@
 .DS_Store
+build/
+.sass-cache/
+npm-debug.log
+node_modules/
