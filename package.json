@@ -21,7 +21,7 @@
     "gulp-cached": "^1.1.0",
     "gulp-livereload": "^3.8.1",
     "gulp-nodemon": "^2.0.4",
-    "gulp-ruby-sass": "^2.0.4",
+    "gulp-sass": "^2.0.4",
     "run-sequence": "^1.1.4"
   }
 }

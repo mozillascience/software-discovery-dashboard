@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
   nodemon = require('gulp-nodemon'),
   livereload = require('gulp-livereload'),
-  sass = require('gulp-ruby-sass'),
+  sass = require('gulp-sass'),
   babel = require('gulp-babel'),
   del = require('del'),
   runSequence = require('run-sequence'),
@@ -45,7 +45,8 @@ gulp.task('moveViews', function() {
 });
 
 gulp.task('sassBuild', function() {
-  return sass('public/stylesheets/**/*.scss')
+  return gulp.src('public/stylesheets/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(cache('sassBuild'))
     .pipe(gulp.dest('build/public/stylesheets'));
 });
