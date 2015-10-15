@@ -17,6 +17,7 @@
   "devDependencies": {
     "del": "^2.0.2",
     "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
     "gulp-cached": "^1.1.0",
     "gulp-livereload": "^3.8.1",
     "gulp-nodemon": "^2.0.4",
