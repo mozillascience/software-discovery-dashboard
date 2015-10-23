@@ -13,6 +13,7 @@
     "jade": "~1.11.0",
     "jest-cli": "^0.5.10",
     "morgan": "~1.6.1",
+    "request": "^2.65.0",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {

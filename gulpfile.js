@@ -63,7 +63,7 @@ gulp.task('clean', function(callback) {
 });
 
 gulp.task('build', function(callback) {
-  return runSequence('clean', 'moveDependencies', ['jsBuild', 'sassBuild', 'moveViews'], callback);
+  return runSequence('clean', ['moveDependencies', 'jsBuild', 'sassBuild', 'moveViews'], callback);
 });
 
 gulp.task('develop', function(callback) {
