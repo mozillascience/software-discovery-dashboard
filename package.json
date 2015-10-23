@@ -20,6 +20,7 @@
     "gulp": "^3.9.0",
     "gulp-babel": "^5.2.1",
     "gulp-cached": "^1.1.0",
+    "gulp-jshint": "^1.11.2",
     "gulp-livereload": "^3.8.1",
     "gulp-nodemon": "^2.0.4",
     "gulp-sass": "^2.0.4",
