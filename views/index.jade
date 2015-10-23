@@ -1,5 +1,62 @@
 extends layout
 
+block navigation
+    nav.navbar.navbar-default
+      div.container-fluid
+        div.navbar-header
+        a.navbar-brand(href='#')
+          img.nav-logo(src='' alt='logo')
+        div.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li: a(href='#') Link
+            li: a(href='#') Link2
+
+
+
 block content
-  h1= title
-  p Welcome to #{title}
+  div.main
+    h1= title
+    p Welcome to #{title}
+      form.form-inline.text-center
+        div.form-group
+          input.form-control.searchbar(type='search' name='search')
+          button.btn.btn-default(type='submit' name='submit-search') Search
+        div.form-inline
+          label.checkbox-inline
+            input(type='checkbox' value='option1')
+            ="1"
+
+          label.checkbox-inline 
+            input(type='checkbox' value='option2')
+            ="2"
+          label.checkbox-inline
+            input(type='checkbox' value='option3')
+            ="3"
+
+
+  
+block footer
+  div.footer.container-fluid
+    div.row
+      div.col-xs-1
+      div.col-xs-4
+        img(src='' alt="mozilla")
+        ul
+          li Terms of Service
+          li Privacy Policy
+          li Code of Conduct
+          li Report a Bug
+          li Creative Commons Attribution 4.0 International License
+      div.col-xs-3
+        h5 KEEP IN TOUCH
+        ul
+          li Forum
+          li @MozillaScience
+          li Community Call
+          li RSS Feed
+          li #ScienceLab
+      div.col-xs-4
+        h5 MAILING LIST
+        p Occasional e-mail updates & news
+
+

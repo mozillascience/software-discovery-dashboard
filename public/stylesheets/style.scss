@@ -1,8 +1,40 @@
-body {
-  padding: 50px;
+$sand-top: #D7D3C8;
+$sand-bottom: #F6F4EC;
+$salmon: #D9615B;
+$science-blue: #C9E3F6;
+
+html, body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin:0;
+  padding:0;
+  height:100%;
+}
+body{
+	background-image: url(/images/grain.png), (linear-gradient(white, white));
+
+}
+.main{
+	//background-image: url(/images/grain.png), (linear-gradient($sand-top, $sand-bottom));
+	height:100%;
+	width:100%;
 }
 
 a {
   color: #00B7FF;
+}
+.navbar{
+	margin-bottom:0px !important;
+	background-color: $science-blue !important;
+}
+
+.searchbar{
+	width: 400px !important;
+}
+.btn{
+	margin-left: 5px !important;
+}
+
+.footer{
+	background-color: $salmon;
+	color:white !important;
 }
