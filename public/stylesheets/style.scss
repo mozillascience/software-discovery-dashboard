@@ -1,0 +1,135 @@
+$sand-top: #D7D3C8;
+$sand-bottom: #F6F4EC;
+$salmon: #D9615B;
+$science-blue: #C9E3F6;
+$spacer-orange: #F7C4A6;
+
+html, body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin:0;
+  padding:0;
+  height:100%;
+}
+body{
+	background-image: url(/images/grain.png), (linear-gradient(white, white));
+
+}
+.main{
+	//background-image: url(/images/grain.png), (linear-gradient($sand-top, $sand-bottom));
+	height:100%;
+	width:100%;
+}
+#moz-logo{
+	margin:0;
+	padding:0;
+
+}
+#navbar-brand-link{
+	margin:0;
+	padding:0;
+	margin-top:10%;
+}
+#form{
+	margin-top:50px;
+}
+#footer-background{
+	height:373px;
+	background-color: $salmon;
+	border-top: 12px solid $science-blue;
+}
+#footer-image{
+	height:127px;
+}
+#footer{
+	height:500px;
+}
+#moz-footer-logo{
+	margin-bottom:10px;
+}
+#footer-text{
+	width:90%;
+	margin:0 auto;
+}
+a {
+  color: #00B7FF;
+}
+.navbar{
+	margin-bottom:0px !important;
+	background-color: $science-blue !important;
+}
+
+.searchbar{
+	width: 400px !important;
+}
+.btn{
+	margin-left: 5px !important;
+}
+
+.footer{
+	
+	color:white !important;
+}
+.repository-selection{
+	margin-top:10px;
+
+}
+
+.form-div{
+	width: 500px;
+}
+.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+}
+.footer-list{
+	list-style-type:none;
+	font-size: .9em !important;
+}
+.footer-content{
+	margin-top: 80px;
+}
+.footer-header a{
+	color:white !important;
+	font-size: 20px !important;
+	font-weight: normal;
+}
+.footer-list a{
+	color:white !important;
+}
+b + span, .footer-list span + span{
+	margin-left:5px;
+}
+.footer-links{
+	display:flex;
+	flex-direction:row;
+	justify-content: space-between;
+	flex-wrap:wrap;
+	margin-left:15px;
+	margin-top:75px;
+
+	
+}
+.footer-design{
+	position:absolute;
+	margin-left:20px;
+	margin-top:-45px;
+}
+.spacer{
+	border-right: 1px solid $spacer-orange;
+}
+.pure-button{
+	background: $science-blue;
+	color: $salmon;
+	    padding: 0.5em 1em 0.6em;
+    margin: 0 0.5em;
+    border: none;
+    font-size: 1em;
+    line-height: 1em;
+}
+#footer-signup{
+	width:200px;
+}
+#footer-form{
+	margin-top:50px;
+}

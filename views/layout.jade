@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+    if ENV_DEVELOPMENT
+      script(src='http://localhost:35729/livereload.js')
+  body
+    block navigation
+
+    block content
+
+    block footer
+
+    block js
+      script(src="/javascripts/hello.js")
