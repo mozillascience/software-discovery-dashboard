@@ -103,7 +103,7 @@ footer{
 				}
 			}
 			ul{
-				b + span, .footer-list span + span{
+				b + span, &.footer-list span + span{
 					margin-left:5px;
 				}
 				&.footer-list{
