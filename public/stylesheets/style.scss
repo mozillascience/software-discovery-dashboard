@@ -1,24 +1,29 @@
+//Colors
 $sand-top: #D7D3C8;
 $sand-bottom: #F6F4EC;
 $salmon: #D9615B;
 $science-blue: #C9E3F6;
 $spacer-orange: #F7C4A6;
 
+//HTML Elements
 html, body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  margin:0;
-  padding:0;
-  height:100%;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	margin:0;
+  	padding:0;
+  	height:100%;
 }
 body{
 	background-image: url(/images/grain.png), (linear-gradient(white, white));
 
 }
+a {
+  	color: #00B7FF;
+}
 .main{
 	//background-image: url(/images/grain.png), (linear-gradient($sand-top, $sand-bottom));
-	height:100%;
 	width:100%;
 }
+
 #moz-logo{
 	margin:0;
 	padding:0;
@@ -40,9 +45,7 @@ body{
 #footer-image{
 	height:127px;
 }
-#footer{
-	height:500px;
-}
+
 #moz-footer-logo{
 	margin-bottom:10px;
 }
@@ -50,24 +53,36 @@ body{
 	width:90%;
 	margin:0 auto;
 }
-a {
-  color: #00B7FF;
+ul.footer-list{
+	list-style-type:none;
+	font-size: .9em;
 }
-.navbar{
-	margin-bottom:0px !important;
-	background-color: $science-blue !important;
+.footer-content{
+	margin-top: 80px;
+}
+h3.footer-header a{
+	color:white ;
+	font-size: 20px;
+	font-weight: normal;
+}
+ul.footer-list a{
+	color:white;
+}
+nav.navbar{
+	margin-bottom:0px;
+	background-color: $science-blue;
 }
 
-.searchbar{
-	width: 400px !important;
+input.searchbar.form-control{
+	width: 400px;
 }
-.btn{
-	margin-left: 5px !important;
+button.btn.btn-default{
+	margin-left: 5px;
 }
 
-.footer{
-	
-	color:white !important;
+div.footer{
+	height:500px;
+	color:white;
 }
 .repository-selection{
 	margin-top:10px;
@@ -82,21 +97,7 @@ a {
      margin-left: auto;
      margin-right: auto;
 }
-.footer-list{
-	list-style-type:none;
-	font-size: .9em !important;
-}
-.footer-content{
-	margin-top: 80px;
-}
-.footer-header a{
-	color:white !important;
-	font-size: 20px !important;
-	font-weight: normal;
-}
-.footer-list a{
-	color:white !important;
-}
+
 b + span, .footer-list span + span{
 	margin-left:5px;
 }
