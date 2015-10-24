@@ -4,7 +4,7 @@ block navigation
     nav.navbar.navbar-default
       div.container-fluid
         div.navbar-header
-          a#navbar-brand-link.navbar-brand(href='#')
+          a.navbar-brand-link.navbar-brand(href='#')
             img.nav-logo#moz-logo(src='/images/logo.png' alt='logo' width='130px' height='32px')
         div.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
@@ -38,11 +38,11 @@ block content
 
   
 block footer
-  div.footer
-    div#footer-image
+  footer.footer
+    div.footer-image
       img.footer-design(src="/images/footer.png" with="200px" height="205px")
-    div#footer-background
-      div#footer-text
+    div.footer-background
+      div.footer-text
         div.row
           div.col-xs-5.footer-content
             ul.footer-list
@@ -78,8 +78,8 @@ block footer
           div.col-xs-4.footer-content
             h6 MAILING LIST
             p Occasional e-mail updates & news
-            form.form-inline#footer-form(action="https://mail.mozilla.org/subscribe/mozillascience" method="POST")
-              input.form-control#footer-signup(placeholder="Sign up with your e-mail" name="email")
+            form.form-inline.footer-form(action="https://mail.mozilla.org/subscribe/mozillascience" method="POST")
+              input.form-control.footer-signup(placeholder="Sign up with your e-mail" name="email")
               button.pure-button.pure-button-primary(type="submit")
                 i.fa.fa-caret-right
         div.row
