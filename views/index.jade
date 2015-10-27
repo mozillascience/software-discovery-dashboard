@@ -3,11 +3,14 @@ extends layout
 block navigation
     nav.navbar.navbar-default
       div.container-fluid.navbar-content
+        link(href="/stylesheets/tabzilla.css" rel="stylesheet")
+        div#tabzilla
+          a(href="https://www.mozilla.org/") mozilla
         div.navbar-header
           a.navbar-brand-link.navbar-brand(href='#')
-            img.nav-logo#moz-logo(src='/images/logo.png' alt='logo' width='130px' height='32px')
+            img.nav-logo#moz-logo(src='/images/logo.png' alt='logo' width='260px' height='65px')
         div.collapse.navbar-collapse
-          ul.nav.navbar-nav.navbar-right
+          ul.nav.navbar-nav
             li: a(href='#') Link
             li: a(href='#') Link2
 
@@ -17,7 +20,6 @@ block content
   div.main
     div.text-center
       h1= title
-      p Welcome to #{title}
     div.form-div.center#form
       form.form-inline
         div.form-group

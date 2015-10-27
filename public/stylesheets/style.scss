@@ -32,22 +32,32 @@ div{
 
 nav.navbar{
 	margin-bottom:0px;
+	margin-top:2px;
+	height:75px;
 	background-color: $science-blue;
 	a{
 		&.navbar-brand-link{
 		margin:0;
 		padding:0;
-		margin-top:10%;
+		margin-top:11px;
 		}
 		#moz-logo{
 			margin:0;
 			padding:0;
+			height:36px;
+			width:auto;
 		}
 	}
 	div{
 		&.navbar-content{
 			width: 80%;
 			text-align: center;
+		}
+	}
+	ul{
+		&.navbar-nav{
+			margin-top:10px;
+			margin-left: 20px;
 		}
 	}
 }
@@ -166,5 +176,3 @@ footer{
      margin-left: auto;
      margin-right: auto;
 }
-
-
