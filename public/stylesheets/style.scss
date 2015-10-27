@@ -13,7 +13,7 @@ html, body {
   	height:100%;
 }
 body{
-	background-image: url(/images/grain.png), (linear-gradient(white, white));
+	background-color: #fff;;
 
 }
 a {
@@ -42,6 +42,12 @@ nav.navbar{
 		#moz-logo{
 			margin:0;
 			padding:0;
+		}
+	}
+	div{
+		&.navbar-content{
+			width: 80%;
+			text-align: center;
 		}
 	}
 }
@@ -77,6 +83,7 @@ footer{
 	&.footer{
 		height:500px;
 		color:white;
+		margin-top:200px;
 
 		div{
 			&.footer-background{
@@ -130,12 +137,12 @@ footer{
 					}
 				}
 			}
+			form.form-inline.footer-form{
+				margin-top:30px;
+			}
 			input{
 				&.footer-signup{
 					width:200px;
-				}
-				&.footer-form{
-					margin-top:50px;
 				}
 			}
 			h3{
