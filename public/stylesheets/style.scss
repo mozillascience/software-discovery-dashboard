@@ -7,7 +7,7 @@ $spacer-orange: #F7C4A6;
 
 //HTML Elements
 html, body {
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font: 14px "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin:0;
   	padding:0;
   	height:100%;
@@ -104,7 +104,11 @@ footer{
 		height:500px;
 		color:white;
 		margin-top:200px;
-
+		font-size: 1.0em;
+		h3{
+			font-family: 'Fira Sans', Arial, "Lucida Grande", sans-serif;
+			font-weight: 300;
+		}
 		div{
 			&.footer-background{
 				height:373px;
@@ -120,18 +124,52 @@ footer{
 				height:127px;
 			}
 			.footer-content{
-				margin-top: 80px;
+				margin-top: 70px;
+				margin-left: 32px;
+				&.social-media{
+					margin-left: 24px;
+					margin-top: 60px;
+				}
+				&.subscribe-footer{
+					@extend .social-media;
+					margin-left:108px;
+					input{
+						font-size:0.9em;
+						font-style:italic;
+						width:160px;
+						height:28px;
+						border-radius:0px;
+						border:none;
+						padding: 0.5em;
+					}
+				}
+		
+				p{
+					&.small-text{
+						font-size: 85%;
+						color: #ccc;
+						margin-top: -10px;
+					}
+				}
 			}
 			img{
 				&.footer-design{
 					position:absolute;
 					margin-left:20px;
-					margin-top:-45px;
+					margin-top:-46px;
 				}
 			}
+			h5{
+				font-size:1.0em;
+				line-height:1.7em;
+				margin-bottom:14px;
+				font-weight: 400;
+
+			}
 			ul{
+				line-height:1.6em;
 				b + span, &.footer-list span + span{
-					margin-left:5px;
+					margin-left:4px;
 				}
 				&.footer-list{
 					a{
@@ -139,21 +177,31 @@ footer{
 					}
 					list-style-type:none;
 					font-size: .9em;
+					letter-spacing: normal;
+					word-spacing: normal;
 				}
 				&.footer-links{
 					display:flex;
 					flex-direction:row;
 					justify-content: space-between;
 					flex-wrap:wrap;
-					margin-left:15px;
+					margin-left:48px;
 					margin-top:75px;
+					width:90%;
+					li{
+						a{
+							text-transform: uppercase;
+							font-size: 0.8em;
+
+						}
+					}
 				}
 				li{
 					&.spacer{
 						border-right: 1px solid $spacer-orange;
 					}
 					#moz-footer-logo{
-						margin-bottom:10px;
+						margin-bottom:13px;
 					}
 				}
 			}
@@ -170,7 +218,6 @@ footer{
 					a{
 						color:white ;
 						font-size: 20px;
-						font-weight: normal;
 					}
 				} 
 			}
