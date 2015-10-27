@@ -35,6 +35,14 @@ nav.navbar{
 	margin-top:2px;
 	height:75px;
 	background-color: $science-blue;
+	&.navbar-default{
+		border-width:0px 0px 3px 0px;
+		
+
+		border-image: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0.84) 14%,rgba(255,255,255,0.54) 26%,rgba(255,255,255,0.4) 42%,rgba(255,255,255,0.1) 61%,rgba(255,255,255,0) 70%,rgba(255,255,255,0)1 100%);
+
+	}
+	
 	a{
 		&.navbar-brand-link{
 		margin:0;
@@ -46,12 +54,15 @@ nav.navbar{
 			padding:0;
 			height:36px;
 			width:auto;
+			margin-left: -1px;
+
 		}
 	}
 	div{
 		&.navbar-content{
-			width: 80%;
+			width: 80% ;
 			text-align: center;
+			marign:0 auto;
 		}
 	}
 	ul{
