@@ -4,10 +4,19 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='/bootstrap/dist/js/bootstrap.min.js')
     link(rel='stylesheet', href='/font-awesome/css/font-awesome.min.css')
-    link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Fira+Sans:300" type='text/css')
+    link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Fira+Sans:300, 400, 800" type='text/css')
     if ENV_DEVELOPMENT
       script(src='http://localhost:35729/livereload.js')
+
+    script.
+      $(document).ready(function() {
+        $('ul.dropdown-menu li a').click(function(e) { 
+          $('#keyword-dropdown').html(e.currentTarget.text);
+        });
+      });
   body
     block navigation
 

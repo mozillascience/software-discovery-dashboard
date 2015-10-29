@@ -14,14 +14,37 @@ html, body {
 }
 body{
 	background-color: #fff;;
+	h1, h2, h3, h4, h5{
+		font-family: 'Fira Sans', Arial, "Lucida Grande", sans-serif;
+		font-weight:800;
+	}
+	}
 
-}
 a {
   	color: #00B7FF;
 }
 .main{
 	//background-image: url(/images/grain.png), (linear-gradient($sand-top, $sand-bottom));
 	width:100%;
+	min-height:50%;
+	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+ 	div.main-content{
+ 		width: 80%;
+ 	}
+ 	form{
+ 		width:580px;
+ 		margin:0 auto;
+ 		.checkbox-inline{
+ 			margin-left:5px;
+ 		}
+ 		div{
+			&.form-group{
+ 				width:580px;
+ 			}
+ 		}
+ 	}
 }
 
 div{
@@ -101,17 +124,17 @@ form{
 
 footer{
 	&.footer{
-		height:500px;
+		width:100%;
 		color:white;
-		margin-top:200px;
 		font-size: 1.0em;
+		bottom:0px;
+		position:absolute;
 		h3{
 			font-family: 'Fira Sans', Arial, "Lucida Grande", sans-serif;
 			font-weight: 300;
 		}
 		div{
 			&.footer-background{
-				height:373px;
 				background-color: $salmon;
 				border-top: 12px solid $science-blue;
 			
@@ -121,14 +144,14 @@ footer{
 				margin:0 auto;
 			}
 			&.footer-image{
-				height:127px;
+				//height:127px;
 			}
 			.footer-content{
-				margin-top: 70px;
+				margin-top: 30px;
 				margin-left: 32px;
 				&.social-media{
 					margin-left: 24px;
-					margin-top: 60px;
+					margin-top: 25px;
 				}
 				&.subscribe-footer{
 					@extend .social-media;
@@ -156,7 +179,7 @@ footer{
 				&.footer-design{
 					position:absolute;
 					margin-left:20px;
-					margin-top:-46px;
+					margin-top:-173px;
 				}
 			}
 			h5{
@@ -186,7 +209,7 @@ footer{
 					justify-content: space-between;
 					flex-wrap:wrap;
 					margin-left:48px;
-					margin-top:75px;
+					//margin-top:75px;
 					width:90%;
 					li{
 						a{
@@ -225,11 +248,7 @@ footer{
 	}
 }
 
-.form-div{
-	width: 500px;
-}
 .center {
-     float: none;
-     margin-left: auto;
-     margin-right: auto;
+     margin:0 auto;
+     text-align:center;
 }
