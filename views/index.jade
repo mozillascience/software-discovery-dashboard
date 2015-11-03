@@ -24,29 +24,42 @@ block content
       div.form-div.center#form
         form
           div.form-group
+            div.btn-group.repository-selection(role="group")
+              button.btn.btn-default(type="button") DataCite
+              button.btn.btn-default(type="button") GitHub
+              button.btn.btn-default(type="button") BitBucket
+              button.btn.btn-default(type="button") FigShare
+              button.btn.btn-default(type="button") Zenodo
             div.input-group
               div.input-group-btn
-                button.btn.btn-default.dropdown-toggle#keyword-dropdown(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Keywords
+                button.btn.btn-default.dropdown-toggle#keyword-dropdown(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Keywords 
                   span.caret
                 ul.dropdown-menu
                   li
-                    a(href="#") Keywords
-                    a(href="#") Email
+                    a(href="#") Name 
+                  li
+                    a(href="#") Citation 
+                  li
+                    a(href="#") Author 
+                  li
+                    a(href="#") ORCID 
+                  li
+                    a(href="#") Email 
+                  li
+                    a(href="#") Type 
+                  li
+                    a(href="#") Keywords 
+                  li
+                    a(href="#") Description 
+                  li
+                    a(href="#") Code Repository 
+                  li
+                    a(href="#") License 
+                  li
+                    a(href="#") Date
 
-              input.form-control.searchbar(type='search' name='search')
-              button.btn.btn-default(type='submit' name='submit-search') Search
-          div.form-inline.repository-selection.text-left
-            label.checkbox-inline
-              input(type='checkbox' value='option1' checked='true')
-              ="DataCite"
-          //
-            label.checkbox-inline 
-              input(type='checkbox' value='option2')
-              ="GitHub"
-            label.checkbox-inline
-              input(type='checkbox' value='option3')
-              ="FigShare"
-
+              input.form-control.searchbar#search(type='search' name='search')
+            button.btn.btn-default.search-button(type='submit' name='submit-search') Search
 
   
 block footer

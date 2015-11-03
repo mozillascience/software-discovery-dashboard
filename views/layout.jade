@@ -11,12 +11,6 @@ html
     if ENV_DEVELOPMENT
       script(src='http://localhost:35729/livereload.js')
 
-    script.
-      $(document).ready(function() {
-        $('ul.dropdown-menu li a').click(function(e) { 
-          $('#keyword-dropdown').html(e.currentTarget.text);
-        });
-      });
   body
     block navigation
 
@@ -25,4 +19,18 @@ html
     block footer
 
     block js
+      script.
+        var repoElements = document.querySelectorAll("div.repository-selection button");
+        Array.prototype.forEach.call(repoElements, function(el, i) {
+          el.addEventListener("click", function() {
+            el.classList.toggle("active");
+          });
+        });
+
+        var dropdownElements = document.querySelectorAll("ul.dropdown-menu li a");
+        Array.prototype.forEach.call(dropdownElements, function(el, i) {
+          el.addEventListener("click", function() {
+          var shit = document.getElementById("keyword-dropdown");
+          shit.childNodes[0].nodeValue = el.innerHTML});
+        });
       script(src="/javascripts/hello.js")

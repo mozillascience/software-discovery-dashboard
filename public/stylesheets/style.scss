@@ -34,15 +34,21 @@ a {
  		width: 80%;
  	}
  	form{
- 		width:580px;
  		margin:0 auto;
- 		.checkbox-inline{
- 			margin-left:5px;
- 		}
+ 		max-width: 40%;
  		div{
-			&.form-group{
- 				width:580px;
+			&.repository-selection{
+				margin-bottom:25px;
  			}
+ 		}
+ 		input{
+			&.searchbar.form-control{
+				width:100%;
+			}
+ 		}
+ 		button.search-button{
+ 			margin-top:20px;
+ 			min-width: 150px;
  		}
  	}
 }
@@ -96,15 +102,7 @@ nav.navbar{
 }
 
 form{
-	input{
-		&.searchbar.form-control{
-			width:400px;
-		}
-	}
 	button{
-		&.btn.btn-default{
-			margin-left: 5px;
-		}
 		&.pure-button{
 			background: $science-blue;
 			color: $salmon;
@@ -113,11 +111,6 @@ form{
 		    border: none;
 		    font-size: 1em;
 		    line-height: 1em;
-		}
-	}
-	div{
-		&.repository-selection{
-			margin-top:10px;
 		}
 	}
 }
