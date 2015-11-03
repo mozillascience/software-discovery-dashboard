@@ -1,0 +1,23 @@
+{
+  "name": "software-discovery-dashboard",
+  "description": "",
+  "main": "",
+  "authors": [
+    "amb8805 <amb8805@rit.edu>", "mxm6060 <mxm6060@rit.edu"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mozillascience/software-discovery-dashboard",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "fontawesome#~4.4.0"
+  }
+}
