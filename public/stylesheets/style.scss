@@ -24,7 +24,6 @@ a {
   	color: #00B7FF;
 }
 .main{
-	//background-image: url(/images/grain.png), (linear-gradient($sand-top, $sand-bottom));
 	width:100%;
 	min-height:50%;
 	display: flex;
@@ -66,10 +65,7 @@ nav.navbar{
 	background-color: $science-blue;
 	&.navbar-default{
 		border-width:0px 0px 3px 0px;
-		
-
 		border-image: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0.84) 14%,rgba(255,255,255,0.54) 26%,rgba(255,255,255,0.4) 42%,rgba(255,255,255,0.1) 61%,rgba(255,255,255,0) 70%,rgba(255,255,255,0)1 100%);
-
 	}
 	
 	a{
@@ -83,7 +79,6 @@ nav.navbar{
 			padding:0;
 			height:36px;
 			width:auto;
-
 		}
 	}
 	div{
