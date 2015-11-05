@@ -23,7 +23,7 @@ block content
         h1= title
       div.form-div.center#form
         form
-          div.form-group
+          div.form-group.main-search
             div.btn-group.repository-selection(role="group")
               button.btn.btn-default(type="button") DataCite
               button.btn.btn-default(type="button") GitHub
@@ -32,7 +32,7 @@ block content
               button.btn.btn-default(type="button") Zenodo
             div.input-group
               div.input-group-btn
-                button.btn.btn-default.dropdown-toggle#keyword-dropdown(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Keywords 
+                button.btn.btn-default.dropdown-toggle.keyword-dropdown(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Keywords 
                   span.caret
                 ul.dropdown-menu
                   li
@@ -59,6 +59,9 @@ block content
                     a(href="#") Date
 
               input.form-control.searchbar#search(type='search' name='search')
+              span.input-group-btn
+                button.btn.btn-default.add-search-button(type="button") 
+                  i.fa.fa-plus
             button.btn.btn-default.search-button(type='submit' name='submit-search') Search
 
   
