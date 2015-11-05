@@ -26,18 +26,14 @@ html
             el.classList.toggle("active");
           });
         });
-
-        var dropdownElements = document.querySelectorAll("ul.dropdown-menu li a");
-
- 
-        var addButtons = document.getElementsByClassName("add-search-button");
+        var searchBarNodeClone = document.querySelectorAll('div.reusable-search')[0].cloneNode(true);
         var searchListeners = document.querySelectorAll("div.main-search");
         Array.prototype.forEach.call(searchListeners, function(el, i){
           el.addEventListener("click", function(){
           //add button
             if(event.target.classList.contains('add-search-button')){
-              var newNode = event.target.parentNode.parentNode.cloneNode(true);
-              event.target.parentNode.parentNode.parentNode.insertBefore(newNode,event.target.parentNode.parentNode.nextSibling);
+             // var newNode = event.target.parentNode.parentNode.cloneNode(true);
+              event.target.parentNode.parentNode.parentNode.insertBefore(searchBarNodeClone,event.target.parentNode.parentNode.nextSibling);
             }
           //add button icon
             else if(event.target.parentNode.classList.contains('add-search-button')){
