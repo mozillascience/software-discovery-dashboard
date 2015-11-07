@@ -1,12 +1,12 @@
 import * as request from 'Request';
-import 'convertToDataCiteSchema' from '../repository-mappers/datacite-mapper';
+import { convertToDataCiteSchema } from '../repository-mappers/datacite-mapper';
 
 const dataCiteSearchUrl = 'search.datacite.org/api';
 
 const createDataCiteQuery = function(jsonLd) {
 	const dataCiteSchemaData = convertToDataCiteSchema(jsonLd);
 	const dataCiteKeyValueList = [];
-	for (key : dataCiteSchemaData) {
+	for (key in dataCiteSchemaData) {
 		if (dataCiteSchemaData.hasOwnProperty(key)) {
 			dataCiteKeyValueList.push(key + ':' + dataCiteSchemaData[key]);
 		}
