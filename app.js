@@ -24,8 +24,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+if (app.get('env') === 'development') {
+  app.use(express.static(path.join(__dirname, '../bower_components')));
+} else {
+  app.use(express.static(path.join(__dirname, 'bower_components')));
+}
+
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'bower_components')));
 
 
 
