@@ -32,32 +32,11 @@ block content
               button.btn.btn-default(type="button") Zenodo
             div.input-group.reusable-search
               div.input-group-btn
-                button.btn.btn-default.dropdown-toggle.keyword-dropdown(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Keywords 
+                button.btn.btn-default.dropdown-toggle.keyword-dropdown(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Select 
                   span.caret
                 ul.dropdown-menu
-                  li
-                    a(href="#") Name 
-                  li
-                    a(href="#") Citation 
-                  li
-                    a(href="#") Author 
-                  li
-                    a(href="#") ORCID 
-                  li
-                    a(href="#") Email 
-                  li
-                    a(href="#") Type 
-                  li
-                    a(href="#") Keywords 
-                  li
-                    a(href="#") Description 
-                  li
-                    a(href="#") Code Repository 
-                  li
-                    a(href="#") License 
-                  li
-                    a(href="#") Date
-
+                  each val in ['Author ', 'Citation ', 'Code Repository ', 'Date ', 'Description ', 'Email ', 'Keywords ', 'License ', 'Name ', 'ORCID ', 'Type ']
+                        li: a(href="#")= val
               input.form-control.searchbar#search(type='search' name='search')
               span.input-group-btn
                 button.btn.btn-default.add-search-button(type="button") 

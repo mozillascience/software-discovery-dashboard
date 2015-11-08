@@ -26,25 +26,89 @@ html
             el.classList.toggle("active");
           });
         });
-        var searchBarNodeClone = document.querySelectorAll('div.reusable-search')[0].cloneNode(true);
+
         var searchListeners = document.querySelectorAll("div.main-search");
         Array.prototype.forEach.call(searchListeners, function(el, i){
           el.addEventListener("click", function(){
           //add button
             if(event.target.classList.contains('add-search-button')){
-             // var newNode = event.target.parentNode.parentNode.cloneNode(true);
+              var searchBarNodeClone = document.querySelectorAll('div.reusable-search')[0].cloneNode(true);
+              searchBarNodeClone.childNodes[0].childNodes[0].innerHTML = "Select " + "<span class=\"caret\"></span>";
+              searchBarNodeClone.childNodes[1].value="";
+              searchBarNodeClone.childNodes[1].placeHolder="";
               event.target.parentNode.parentNode.parentNode.insertBefore(searchBarNodeClone,event.target.parentNode.parentNode.nextSibling);
             }
           //add button icon
             else if(event.target.parentNode.classList.contains('add-search-button')){
-              var newNode = event.target.parentNode.parentNode.parentNode.cloneNode(true);
-              event.target.parentNode.parentNode.parentNode.parentNode.insertBefore(newNode,event.target.parentNode.parentNode.parentNode.nextSibling);
+              var searchBarNodeClone = document.querySelectorAll('div.reusable-search')[0].cloneNode(true);
+              searchBarNodeClone.childNodes[0].childNodes[0].innerHTML = "Select " + "<span class=\"caret\"></span>";
+              searchBarNodeClone.childNodes[1].value="";
+              searchBarNodeClone.childNodes[1].placeHolder="";
+              event.target.parentNode.parentNode.parentNode.parentNode.insertBefore(searchBarNodeClone,event.target.parentNode.parentNode.parentNode.nextSibling);
             }
           //dropdown
             else if(event.target.nodeName == 'A'){
               var keywordButton = event.target.parentNode.parentNode.parentNode.firstChild;
               keywordButton.childNodes[0].nodeValue = event.target.innerHTML;
+              var buttonText = keywordButton.innerText.trim();
+              Array.prototype.forEach.call(keywordButton.parentNode.parentNode.childNodes, function(el, i){
+                if(el.nodeName == "INPUT"){
+                  el.name = buttonText;
+                  switch(buttonText){
+                    case "Author":
+                      el.placeholder="i.e. Jon Smith";
+                      el.type="text";
+                      break;
+                    case "Keywords":
+                      el.placeholder="i.e. Biology, Health"
+                      el.type="text"
+                      break;
+                    case "Email":
+                      el.type="email";
+                      el.placeholder="i.e. jon_smith@gmail.com";
+                      break;
+                    case "Date":
+                      el.type="date";
+                      el.placeholder="MM/DD/YYYY";
+                      break;
+                    case "ORCID":
+                      el.type="text";
+                      el.pattern="[0-9X]{16}"
+                      el.placeholder="i.e. 00001111222233334444";                
+                      break;
+                    case "Code Repository":
+                      el.type="url";
+                      el.placeholder="i.e. http://github.com/myRepo";
+                      break;
+                    default:
+                      el.type="text";
+                      el.placeholder="";
+                      //el.required="required";
+                  }
+                }
+              })
+              disabledKeywordHelper();
             }
           });
         });
+        function disabledKeywordHelper(){
+          var keywordButtons = document.querySelectorAll('button.keyword-dropdown');
+          var disabledArray=[];
+          Array.prototype.forEach.call(keywordButtons, function(el, i){
+            disabledArray.push(el.textContent);
+          });
+          var listElements = document.querySelectorAll('ul.dropdown-menu li a');
+          Array.prototype.forEach.call(listElements, function(listEl, j){
+            if(disabledArray.includes(listEl.textContent)){
+              if(!listEl.parentElement.classList.contains('disabled')){
+                listEl.parentElement.classList.toggle('disabled');
+                listEl.parentElement.classList.toggle('list-group-item');
+              }
+            }
+            else if(!disabledArray.includes(listEl.textContent) && listEl.parentElement.classList.contains('disabled')){
+              listEl.parentElement.classList.toggle('disabled');
+              listEl.parentElement.classList.toggle('list-group-item');
+            }
+          });
+        }
       script(src="/javascripts/hello.js")
