@@ -35,7 +35,7 @@ html
               var searchBarNodeClone = document.querySelectorAll('div.reusable-search')[0].cloneNode(true);
               searchBarNodeClone.childNodes[0].childNodes[0].innerHTML = "Select " + "<span class=\"caret\"></span>";
               searchBarNodeClone.childNodes[1].value="";
-              searchBarNodeClone.childNodes[1].placeHolder="";
+              searchBarNodeClone.childNodes[1].placeholder="";
               event.target.parentNode.parentNode.parentNode.insertBefore(searchBarNodeClone,event.target.parentNode.parentNode.nextSibling);
             }
           //add button icon
@@ -43,7 +43,7 @@ html
               var searchBarNodeClone = document.querySelectorAll('div.reusable-search')[0].cloneNode(true);
               searchBarNodeClone.childNodes[0].childNodes[0].innerHTML = "Select " + "<span class=\"caret\"></span>";
               searchBarNodeClone.childNodes[1].value="";
-              searchBarNodeClone.childNodes[1].placeHolder="";
+              searchBarNodeClone.childNodes[1].placeholder="";
               event.target.parentNode.parentNode.parentNode.parentNode.insertBefore(searchBarNodeClone,event.target.parentNode.parentNode.parentNode.nextSibling);
             }
           //dropdown
@@ -100,13 +100,13 @@ html
           });
           var listElements = Array.prototype.slice.call(document.querySelectorAll('ul.dropdown-menu li a'));
           listElements.forEach(function(listEl, j){
-            if(disabledArray.includes(listEl.textContent)){
+            if(disabledArray.indexOf(listEl.textContent) != -1){
               if(!listEl.parentElement.classList.contains('disabled')){
                 listEl.parentElement.classList.toggle('disabled');
                 listEl.parentElement.classList.toggle('list-group-item');
               }
             }
-            else if(!disabledArray.includes(listEl.textContent) && listEl.parentElement.classList.contains('disabled')){
+            else if(disabledArray.indexOf(listEl.textContent) == -1 && listEl.parentElement.classList.contains('disabled')){
               listEl.parentElement.classList.toggle('disabled');
               listEl.parentElement.classList.toggle('list-group-item');
             }
