@@ -20,15 +20,15 @@ html
 
     block js
       script.
-        var repoElements = document.querySelectorAll("div.repository-selection button");
-        Array.prototype.forEach.call(repoElements, function(el, i) {
+        var repoElements = Array.prototype.slice.call(document.querySelectorAll("div.repository-selection button"));
+        repoElements.forEach(function(el, i) {
           el.addEventListener("click", function() {
             el.classList.toggle("active");
           });
         });
 
-        var searchListeners = document.querySelectorAll("div.main-search");
-        Array.prototype.forEach.call(searchListeners, function(el, i){
+        var searchListeners = Array.prototype.slice.call(document.querySelectorAll("div.main-search"));
+        searchListeners.forEach(function(el, i){
           el.addEventListener("click", function(){
           //add button
             if(event.target.classList.contains('add-search-button')){
@@ -51,7 +51,8 @@ html
               var keywordButton = event.target.parentNode.parentNode.parentNode.firstChild;
               keywordButton.childNodes[0].nodeValue = event.target.innerHTML;
               var buttonText = keywordButton.innerText.trim();
-              Array.prototype.forEach.call(keywordButton.parentNode.parentNode.childNodes, function(el, i){
+              var searchFieldArray = Array.prototype.slice.call(keywordButton.parentNode.parentNode.childNodes);
+              searchFieldArray.forEach(function(el, i){
                 if(el.nodeName == "INPUT"){
                   el.name = buttonText;
                   switch(buttonText){
@@ -92,13 +93,13 @@ html
           });
         });
         function disabledKeywordHelper(){
-          var keywordButtons = document.querySelectorAll('button.keyword-dropdown');
+          var keywordButtons = Array.prototype.slice.call(document.querySelectorAll('button.keyword-dropdown'));
           var disabledArray=[];
-          Array.prototype.forEach.call(keywordButtons, function(el, i){
+          keywordButtons.forEach(function(el, i){
             disabledArray.push(el.textContent);
           });
-          var listElements = document.querySelectorAll('ul.dropdown-menu li a');
-          Array.prototype.forEach.call(listElements, function(listEl, j){
+          var listElements = Array.prototype.slice.call(document.querySelectorAll('ul.dropdown-menu li a'));
+          listElements.forEach(function(listEl, j){
             if(disabledArray.includes(listEl.textContent)){
               if(!listEl.parentElement.classList.contains('disabled')){
                 listEl.parentElement.classList.toggle('disabled');
