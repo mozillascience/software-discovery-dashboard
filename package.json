@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "gulp build && node ./build/bin/www.js"
+    "start": "gulp build && node ./build/bin/www.js",
+    "fullinstall": "npm install && bower install"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
