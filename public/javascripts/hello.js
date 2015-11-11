@@ -30,46 +30,48 @@ searchListeners.forEach(function(el, i){
     }
   //dropdown
     else if(event.target.nodeName == 'A'){
-      var keywordButton = event.target.parentNode.parentNode.parentNode.firstChild;
-      keywordButton.childNodes[0].nodeValue = event.target.innerHTML;
-      var buttonText = keywordButton.innerText.trim();
-      var searchFieldArray = Array.from(keywordButton.parentNode.parentNode.childNodes);
-      searchFieldArray.forEach(function(el, i){
-        if(el.nodeName == "INPUT"){
-          el.name = buttonText;
-          switch(buttonText){
-            case "Author":
-              el.placeholder="i.e. Jon Smith";
-              el.type="text";
-              break;
-            case "Keywords":
-              el.placeholder="i.e. Biology, Health"
-              el.type="text"
-              break;
-            case "Email":
-              el.type="email";
-              el.placeholder="i.e. jon_smith@gmail.com";
-              break;
-            case "Date":
-              el.type="date";
-              el.placeholder="MM/DD/YYYY";
-              break;
-            case "ORCID":
-              el.type="text";
-              el.pattern="[0-9X]{16}"
-              el.placeholder="i.e. 00001111222233334444";                
-              break;
-            case "Code Repository":
-              el.type="url";
-              el.placeholder="i.e. http://github.com/myRepo";
-              break;
-            default:
-              el.type="text";
-              el.placeholder="";
-          }
-        }
-      })
-      disabledKeywordHelper();
+    	if(!event.target.parentNode.classList.contains('disabled')){
+    		var keywordButton = event.target.parentNode.parentNode.parentNode.firstChild;
+	      keywordButton.childNodes[0].nodeValue = event.target.innerHTML;
+	      var buttonText = keywordButton.innerText.trim();
+	      var searchFieldArray = Array.from(keywordButton.parentNode.parentNode.childNodes);
+	      searchFieldArray.forEach(function(el, i){
+	        if(el.nodeName == "INPUT"){
+	          el.name = buttonText;
+	          switch(buttonText){
+	            case "Author":
+	              el.placeholder="i.e. Jon Smith";
+	              el.type="text";
+	              break;
+	            case "Keywords":
+	              el.placeholder="i.e. Biology, Health"
+	              el.type="text"
+	              break;
+	            case "Email":
+	              el.type="email";
+	              el.placeholder="i.e. jon_smith@gmail.com";
+	              break;
+	            case "Date":
+	              el.type="date";
+	              el.placeholder="MM/DD/YYYY";
+	              break;
+	            case "ORCID":
+	              el.type="text";
+	              el.pattern="[0-9X]{16}"
+	              el.placeholder="i.e. 00001111222233334444";                
+	              break;
+	            case "Code Repository":
+	              el.type="url";
+	              el.placeholder="i.e. http://github.com/myRepo";
+	              break;
+	            default:
+	              el.type="text";
+	              el.placeholder="";
+	          }
+	        }
+    		});
+      	disabledKeywordHelper();
+      }
     }
   });
 });
