@@ -70,7 +70,7 @@ searchListeners.forEach(function(el, i){
 	          }
 	        }
 	      });
-				disabledKeywordHelper();
+	      disabledKeywordHelper();
 			}
     }
   });
