@@ -29,7 +29,7 @@ searchListeners.forEach(function(el, i){
       event.target.parentNode.parentNode.parentNode.parentNode.insertBefore(searchBarNodeClone,event.target.parentNode.parentNode.parentNode.nextSibling);
     }
   //dropdown
-    else if(event.target.nodeName == 'A'){
+    else if(event.target.nodeName === 'A'){
     	if(!event.target.parentNode.classList.contains('disabled')){
     		var keywordButton = event.target.parentNode.parentNode.parentNode.firstChild;
 	      keywordButton.childNodes[0].nodeValue = event.target.innerHTML;
