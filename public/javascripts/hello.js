@@ -69,9 +69,9 @@ searchListeners.forEach(function(el, i){
 	              el.placeholder="";
 	          }
 	        }
-    		});
-      	disabledKeywordHelper();
-      }
+	      });
+				disabledKeywordHelper();
+			}
     }
   });
 });
