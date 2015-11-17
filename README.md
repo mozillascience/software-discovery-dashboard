@@ -21,6 +21,6 @@ To run the Software Discovery Dashboard locally, run these steps:
 4. run `npm start` and open up `http://localhost:3000/` in your favourite web browser!
 
 ##Communication
-  IRC
-  Server: irc.mozilla.org
-  Channel: #SoftwareDiscoveryDashboard
+IRC  
+Server: irc.mozilla.org  
+Channel: #SoftwareDiscoveryDashboard  
