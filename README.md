@@ -19,3 +19,8 @@ To run the Software Discovery Dashboard locally, run these steps:
 2. run `bower install`
 3. run `npm install`
 4. run `npm start` and open up `http://localhost:3000/` in your favourite web browser!
+
+##Communication
+  IRC</br>
+  Server: irc.mozilla.org</br>
+  Channel: #SoftwareDiscoveryDashboard
