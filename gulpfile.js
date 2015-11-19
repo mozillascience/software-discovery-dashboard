@@ -7,10 +7,12 @@ const gulp = require('gulp'),
     runSequence = require('run-sequence'),
     cache = require('gulp-cached'),
     jshint = require('gulp-jshint');
+    jest = require('jest-cli');
 
 gulp.task('watch', function() {
     livereload.listen();
 
+    gulp.watch('**/__tests__/**/*.js', ['test']);
     gulp.watch('public/stylesheets/*.scss', ['sassBuild']);
     gulp.watch(['**/*.js', '!node_modules/**', '!bower_components/**', '!build/**'], ['jsBuild']);
     gulp.watch('views/**/*.jade', ['moveViews']);
@@ -21,7 +23,8 @@ gulp.task('liveResetting', function() {
         script: 'build/bin/www',
         ext: 'js jade css',
         watch: ['build/'],
-        stdout: false 
+        stdout: false,
+        ignore: ['**/__tests__/**/*.js'] 
     }).on('readable', function () {
         this.stdout.on('data', function (chunk) {
             if(/^Express server listening on port/.test(chunk)){
@@ -52,6 +55,12 @@ gulp.task('sassBuild', function() {
         .pipe(gulp.dest('build/public/stylesheets'));
 });
 
+gulp.task('jsonMove', function() {
+    return gulp.src(['**/*.json', '!node_modules/**', '!bower_components/**', '!build/**'])
+        .pipe(cache('moveJson'))
+        .pipe(gulp.dest('build'));
+});
+
 gulp.task('jsBuild', function() {
     return gulp.src(['**/*.js', '!node_modules/**', '!bower_components/**', '!build/**'])
         .pipe(cache('jsBuild'))
@@ -71,7 +80,18 @@ gulp.task('clean', function(callback) {
 });
 
 gulp.task('build', function(callback) {
-    return runSequence('clean', ['jsBuild', 'sassBuild', 'imgMove', 'moveViews'], callback);
+    return runSequence('clean', ['jsonMove', 'jsBuild', 'sassBuild', 'imgMove', 'moveViews'], callback);
+});
+
+gulp.task('test', ['jsBuild'], function(callback) {
+    jest.runCLI({ 'onlyChanged': true, verbose: true }, __dirname, (result) => {
+        if (result) {
+            console.log("Success!!");
+        } else {
+            console.log("Faiiilure");
+        }
+        callback();
+    });
 });
 
 gulp.task('productionBuild', function(callback) {
