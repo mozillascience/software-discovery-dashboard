@@ -21,14 +21,14 @@ router.get('/', (req, res, next) => {
     const jsonLd = getJsonLdFromQueryParams(req.query);
     console.log(jsonLd);
 
-	switch (req.query.repos) {
-		case 'figshare':
-			searchFigshare(jsonLd).then((result) => {
-				res.send(result);
-			}).catch((error) => {
-				throw error;
-			});
-	}
+    switch (req.query.repos) {
+        case 'figshare':
+            searchFigshare(jsonLd).then((result) => {
+                res.send(result);
+            }).catch((error) => {
+                throw error;
+            });
+    }
 });
 
 export default router;
