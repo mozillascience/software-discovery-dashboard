@@ -115,8 +115,16 @@ var urlParams;
     while (match = search.exec(query))
        urlParams[decode(match[1])] = decode(match[2]);
 })();
-if(urlParams.keys({}).length){
-  //dislpay results
+function isEmpty(urlParams) {
+  for(var key in urlParams) {
+    if(urlParams.hasOwnProperty(key)){
+      return false;
+    }
+  }
+  return true;
+}
+if(isEmpty(urlParams)){
+  //display results
 }
 var form = document.getElementById('search-form');
 if (form.attachEvent) {
