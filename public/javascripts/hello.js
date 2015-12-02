@@ -95,3 +95,32 @@ function disabledKeywordHelper(){
     }
   });
 }
+function processForm(e) {
+  //if (e.preventDefault) e.preventDefault();
+    console.log(e);   
+    /* do what you want with the form */
+
+    // You must return false to prevent the default form behavior
+    return false;
+}
+var urlParams;
+(window.onpopstate = function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+})();
+if(urlParams.keys({}).length){
+  //dislpay results
+}
+var form = document.getElementById('search-form');
+if (form.attachEvent) {
+    form.attachEvent("submit", processForm);
+} else {
+    form.addEventListener("submit", processForm);
+}

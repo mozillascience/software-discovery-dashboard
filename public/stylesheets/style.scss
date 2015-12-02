@@ -27,10 +27,11 @@ a {
 	width:100%;
 	min-height:50%;
 	display: flex;
- 	align-items: center;
+ //	align-items: center;
  	justify-content: center;
  	div.main-content{
  		width: 80%;
+ 		margin-top:100px;
  	}
  	form{
  		margin:0 auto;
@@ -114,6 +115,7 @@ form{
 		&.pure-button{
 			background: $science-blue;
 			color: $salmon;
+			position:absolute;
 	    	padding: 0.5em 1em 0.6em;
 		    margin: 0 0.5em;
 		    border: none;
@@ -129,7 +131,8 @@ footer{
 		color:white;
 		font-size: 1.0em;
 		bottom:0px;
-		position:absolute;
+		//position:absolute;
+		padding-top:225px;
 		h3{
 			font-family: 'Fira Sans', Arial, "Lucida Grande", sans-serif;
 			font-weight: 300;
