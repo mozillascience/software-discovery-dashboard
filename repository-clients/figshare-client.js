@@ -1,6 +1,6 @@
 import { get } from 'request';
 import { getFigshareAuth } from '../repository-auth/auth-store';
-import { getFigshareMetadata } from '../repository-mappers/figshare-mapper';
+import { getFigshareMetadata, getJsonLd } from '../repository-mappers/figshare-mapper';
 
 const searchUrl = 'http://api.figshare.com/v1/articles/search';
 
@@ -20,7 +20,6 @@ export function searchFigshare(jsonLd) {
     }
 
     queryParams.search_for = searchWords.join(' ');
-    console.log(queryParams);
 
     return new Promise((resolve, reject) => {
         get({ url: searchUrl, qs: queryParams, oauth: getFigshareAuth(), json: true }, (error, response, body) => {

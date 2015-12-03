@@ -1,5 +1,6 @@
 import express from 'express';
 import { searchFigshare } from '../../repository-clients/figshare-client';
+import { getJsonLd } from '../../repository-mappers/figshare-mapper';
 const router = express.Router();
 
 const jsonLdAttributes = ['name', 'citation', 'author', 
@@ -17,14 +18,17 @@ function getJsonLdFromQueryParams(queryParams) {
     return jsonLd;
 }
 
+function concatClientResults(results) {
+    return results.map(getJsonLd);
+}
+
 router.get('/', (req, res, next) => {
     const jsonLd = getJsonLdFromQueryParams(req.query);
-    console.log(jsonLd);
 
     switch (req.query.repos) {
         case 'figshare':
             searchFigshare(jsonLd).then((result) => {
-                res.send(result);
+                res.send(concatClientResults(result.items));
             }).catch((error) => {
                 throw error;
             });
