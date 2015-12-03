@@ -113,19 +113,83 @@ var urlParams;
 
     urlParams = {};
     while (match = search.exec(query))
-       urlParams[decode(match[1])] = decode(match[2]);
+      urlParams[decode(match[1])] = decode(match[2]);
 })();
-function isEmpty(urlParams) {
-  for(var key in urlParams) {
-    if(urlParams.hasOwnProperty(key)){
-      return false;
-    }
+
+console.log(urlParams);
+
+window.addEventListener('DOMContentLoaded', function () {
+  if (Object.keys(urlParams).length > 0) {
+    var content = document.querySelector('.main-content');
+    while (content.firstChild) content.removeChild(content.firstChild);
+
+    var response = [
+      {
+        title : 'This is a Search Result',
+        description : 'This is the description of a search result',
+        codeRepository : 'https://github.com/mok4ry'
+      },
+      {
+        title : 'This is Another Search Result',
+        description : 'This is the description of a another search result',
+        codeRepository : 'https://github.com/lettuceman44'
+      },
+      {
+        title : 'This is Another Search Result',
+        description : 'This is the description of a another search result',
+        codeRepository : 'https://github.com/lettuceman44'
+      },
+      {
+        title : 'This is Another Search Result',
+        description : 'This is the description of a another search result',
+        codeRepository : 'https://github.com/lettuceman44'
+      },
+      {
+        title : 'This is Another Search Result',
+        description : 'This is the description of a another search result',
+        codeRepository : 'https://github.com/lettuceman44'
+      },
+      {
+        title : 'This is Another Search Result',
+        description : 'This is the description of a another search result',
+        codeRepository : 'https://github.com/lettuceman44'
+      },
+      {
+        title : 'This is Another Search Result',
+        description : 'This is the description of a another search result',
+        codeRepository : 'https://github.com/lettuceman44'
+      }
+    ];
+
+    response.forEach(function (r) {
+      var result = document.createElement('div');
+      result.setAttribute('class', 'search-result');
+
+      var titleLink = document.createElement('a');
+      titleLink.setAttribute('href', r.codeRepository);
+      titleLink.textContent = r.title;
+
+      var title = document.createElement('div');
+      title.setAttribute('class', 'result-title');
+      title.appendChild(titleLink);
+
+      var source = document.createElement('div');
+      source.setAttribute('class', 'result-source');
+      source.textContent = r.codeRepository;
+
+      var description = document.createElement('div');
+      description.setAttribute('class', 'result-description');
+      description.textContent = r.description;
+
+      result.appendChild(title);
+      result.appendChild(source);
+      result.appendChild(description);
+
+      content.appendChild(result);
+    });
   }
-  return true;
-}
-if(isEmpty(urlParams)){
-  //display results
-}
+});
+
 var form = document.getElementById('search-form');
 if (form.attachEvent) {
     form.attachEvent("submit", processForm);
