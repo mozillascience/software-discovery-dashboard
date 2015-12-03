@@ -5,7 +5,8 @@ const express = require('express'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser');
 
-const routes = require('./routes/index');
+var routes = require('./routes/index');
+var search = require('./routes/search/search');
 
 const app = express();
 
@@ -32,9 +33,8 @@ if (app.get('env') === 'development') {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
 app.use('/', routes);
+app.use('/search', search);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
