@@ -20,6 +20,11 @@ To run the Software Discovery Dashboard locally, run these steps:
 3. run `npm start` and open up `http://localhost:3000/` in your favourite web browser!
 
 ##Communication
-IRC  
-Server: irc.mozilla.org  
-Channel: #SoftwareDiscoveryDashboard  
+Gitter:  https://gitter.im/mozillascience/SoftwareDiscoveryDashboard  
+Channel: #SoftwareDiscoveryDashboard 
+
+##Project Leadership
+Technical Lead : Luke Coy
+QA Lead : Matt Mokary
+Scrum Master : Stefan Neamtu
+Open Source Relations / Github Guru : Adam Blaine
