@@ -25,6 +25,9 @@ Channel: #SoftwareDiscoveryDashboard
 
 ##Project Leadership
 Technical Lead : Luke Coy
+
 QA Lead : Matt Mokary
+
 Scrum Master : Stefan Neamtu
+
 Open Source Relations / Github Guru : Adam Blaine
