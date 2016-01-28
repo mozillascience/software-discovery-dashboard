@@ -18,3 +18,8 @@ To run the Software Discovery Dashboard locally, run these steps:
 1. Clone `git clone git@github.com:mozillascience/software-discovery-dashboard.git && cd software-discovery-dashboard`
 2. run `npm run fullinstall`
 3. run `npm start` and open up `http://localhost:3000/` in your favourite web browser!
+
+##Communication
+IRC  
+Server: irc.mozilla.org  
+Channel: #SoftwareDiscoveryDashboard  
