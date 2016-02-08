@@ -6,7 +6,15 @@ const gulp = require('gulp'),
     del = require('del'),
     runSequence = require('run-sequence'),
     cache = require('gulp-cached'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    Jasmine = require('jasmine'),
+    jasmineConfig = require('./spec/support/jasmine.json');
+
+gulp.task('test', function() {
+    jasmineRunner = new Jasmine();
+    jasmineRunner.loadConfig(jasmineConfig);
+    jasmineRunner.execute();
+});
 
 gulp.task('watch', function() {
     livereload.listen();
@@ -21,7 +29,7 @@ gulp.task('liveResetting', function() {
         script: 'build/bin/www',
         ext: 'js jade css',
         watch: ['build/'],
-        stdout: false 
+        stdout: false
     }).on('readable', function () {
         this.stdout.on('data', function (chunk) {
             if(/^Express server listening on port/.test(chunk)){
