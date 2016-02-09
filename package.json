@@ -25,6 +25,7 @@
     "gulp-livereload": "^3.8.1",
     "gulp-nodemon": "^2.0.4",
     "gulp-sass": "^2.0.4",
+    "jasmine": "^2.4.1",
     "run-sequence": "^1.1.4"
   }
 }
