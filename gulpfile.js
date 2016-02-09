@@ -11,7 +11,7 @@ const gulp = require('gulp'),
     jasmineConfig = require('./spec/support/jasmine.json');
 
 gulp.task('test', function() {
-    jasmineRunner = new Jasmine();
+    const jasmineRunner = new Jasmine();
     jasmineRunner.loadConfig(jasmineConfig);
     jasmineRunner.execute();
 });
