@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "gulp build && node ./build/bin/www.js",
+    "start": "nodemon -e js lib/server --exec babel-node",
+    "lint": "eslint lib/**",
+    "build": "npm run lint && babel lib -d dist",
+    "serve": "node dist/server",
+    
     "test": "jasmine",
     "fullinstall": "npm install && bower install"
   },
@@ -18,15 +22,14 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
-    "del": "^2.0.2",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^5.2.1",
-    "gulp-cached": "^1.1.0",
-    "gulp-jshint": "^1.11.2",
-    "gulp-livereload": "^3.8.1",
-    "gulp-nodemon": "^2.0.4",
-    "gulp-sass": "^2.0.4",
+    "babel-cli": "^6.5.1",
+    "babel-eslint": "^5.0.0",
+    "babel-preset-es2015": "^6.5.0",
+    "eslint": "^2.2.0",
+    "eslint-config-airbnb": "^6.0.2",
+    "eslint-plugin-react": "^4.0.0",
     "jasmine": "^2.4.1",
-    "run-sequence": "^1.1.4"
+    "node-sass-middleware": "^0.9.7",
+    "nodemon": "^1.9.0"
   }
 }
