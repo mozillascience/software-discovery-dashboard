@@ -5,8 +5,8 @@ const express = require('express'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var search = require('./routes/search/search');
+var routes = require('./lib/routes/index');
+var search = require('./lib/routes/search');
 
 const app = express();
 
