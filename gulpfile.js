@@ -90,17 +90,6 @@ gulp.task('build', function(callback) {
     return runSequence('clean', ['jsonMove', 'jsBuild', 'sassBuild', 'imgMove', 'moveViews'], callback);
 });
 
-gulp.task('test', ['jsBuild'], function(callback) {
-    jest.runCLI({ 'onlyChanged': true, verbose: true }, __dirname, (result) => {
-        if (result) {
-            console.log("Success!!");
-        } else {
-            console.log("Faiiilure");
-        }
-        callback();
-    });
-});
-
 gulp.task('productionBuild', function(callback) {
     return runSequence('build', 'moveDependencies', callback);
 });
