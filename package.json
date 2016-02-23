@@ -7,7 +7,7 @@
     "lint": "eslint lib/**",
     "build": "npm run lint && babel lib -d dist",
     "serve": "node dist/server",
-    
+
     "test": "jasmine",
     "fullinstall": "npm install && bower install"
   },

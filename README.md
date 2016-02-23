@@ -20,7 +20,7 @@ To run the Software Discovery Dashboard locally, run these steps:
 3. run `npm start` and open up `http://localhost:3000/` in your favourite web browser!
 
 ##Communication
-Gitter:  https://gitter.im/mozillascience/SoftwareDiscoveryDashboard
+Gitter:  https://gitter.im/mozillascience/SoftwareDiscoveryDashboard  
 Channel: #SoftwareDiscoveryDashboard
 
 ##Project Leadership
