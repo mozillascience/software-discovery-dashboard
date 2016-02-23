@@ -67,7 +67,7 @@ nav.navbar{
 		border-width:0px 0px 3px 0px;
 		border-image: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0.84) 14%,rgba(255,255,255,0.54) 26%,rgba(255,255,255,0.4) 42%,rgba(255,255,255,0.1) 61%,rgba(255,255,255,0) 70%,rgba(255,255,255,0)1 100%);
 	}
-	
+
 	a{
 		&.navbar-brand-link{
 		margin:0;
@@ -125,7 +125,7 @@ footer{
 			&.footer-background{
 				background-color: $salmon;
 				border-top: 12px solid $science-blue;
-			
+
 			}
 			&.footer-text{
 				width:90%;
@@ -154,7 +154,7 @@ footer{
 						padding: 0.5em;
 					}
 				}
-		
+
 				p{
 					&.small-text{
 						font-size: 85%;
@@ -230,7 +230,7 @@ footer{
 						color:white ;
 						font-size: 20px;
 					}
-				} 
+				}
 			}
 		}
 	}
