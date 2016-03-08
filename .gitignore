@@ -6,3 +6,4 @@ npm-debug.log
 bower_components/
 authconfig.json
 dist/
+*.css
