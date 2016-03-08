@@ -4,3 +4,5 @@ build/
 .DS_Store
 npm-debug.log
 bower_components/
+authconfig.json
+dist/
