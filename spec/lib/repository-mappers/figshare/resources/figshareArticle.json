@@ -1,0 +1,94 @@
+{
+	"status": "public",
+	"embargo_date": null,
+	"citation": "Villanueva Hern\u00e1ndez, Pedro Javier (2015): Essentia determinatum Y Determinismo Racional. figshare.\n 10.6084/m9.figshare.1394809.v1\n Retrieved: 17 02, Mar 15, 2016 (GMT)",
+	"embargo_reason": "",
+	"references": ["http://www.bdigital.unal.edu.co/48126/"],
+	"id": 1394809,
+	"custom_fields": [],
+	"size": 0,
+	"metadata_reason": "",
+	"funding": "",
+	"figshare_url": "https://figshare.com/articles/Essentia_determinatum_Y_Determinismo_Racional/1394809",
+	"embargo_type": null,
+	"title": "Essentia determinatum Y Determinismo Racional",
+	"defined_type": 6,
+	"is_embargoed": false,
+	"version": 1,
+	"confidential_reason": "",
+	"files": [{
+		"id": 2040219,
+		"name": "Essentia determinatum Y Determinismo Racional.pdf",
+		"size": 438023
+	}],
+	"description": "<p>Un ser insignificante, con una existencia insignificante, en un Universo majestuoso: no tiene mayor opci\u00f3n que ser parte de dicho Universo, y moverse, y ser determinado por su propia racionalidad.</p>",
+	"tags": ["Essentia", "Determinatum", "Determinismo", "Racional", "Ser", "F\u00e1tico", "M\u00edstico", "Trascendente", "Colectivo", "social", "Perfecci\u00f3n"],
+	"published_date": "2015-04-27T08:56:14Z",
+	"is_active": true,
+	"authors": [{
+		"url_name": "Pedro_Javier_Villanueva_Hern_ndez",
+		"is_active": true,
+		"id": 726770,
+		"full_name": "Pedro Javier Villanueva Hern\u00e1ndez",
+		"orcid_id": "0000-0002-4106-2545"
+	}],
+	"is_public": true,
+	"categories": [{
+		"id": 163,
+		"title": "Entertainment"
+	}, {
+		"id": 171,
+		"title": "Religious Studies"
+	}, {
+		"id": 172,
+		"title": "Rhetoric"
+	}, {
+		"id": 167,
+		"title": "Language"
+	}, {
+		"id": 100,
+		"title": "Philosophy"
+	}, {
+		"id": 129,
+		"title": "Education"
+	}, {
+		"id": 127,
+		"title": "Archaeology"
+	}, {
+		"id": 126,
+		"title": "History"
+	}, {
+		"id": 97,
+		"title": "Law"
+	}, {
+		"id": 168,
+		"title": "Linguistics"
+	}, {
+		"id": 98,
+		"title": "Literature"
+	}, {
+		"id": 94,
+		"title": "Art"
+	}, {
+		"id": 45,
+		"title": "Sociology"
+	}, {
+		"id": 27,
+		"title": "Economics"
+	}, {
+		"id": 25,
+		"title": "Anthropology"
+	}],
+	"modified_date": "2016-01-19T20:04:30Z",
+	"is_confidential": false,
+	"doi": "10.6084/m9.figshare.1394809.v1",
+	"has_linked_file": false,
+	"license": {
+		"url": "http://creativecommons.org/licenses/by/3.0/us/",
+		"name": "CC-BY",
+		"value": 1
+	},
+	"url": "https://api.figshare.com/v2/articles/1394809",
+	"created_date": "2015-04-27T08:56:14Z",
+	"is_metadata_record": false
+}

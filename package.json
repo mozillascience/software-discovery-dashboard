@@ -7,7 +7,7 @@
     "lint": "eslint lib/**",
     "build": "babel lib -d dist",
     "serve": "node dist/server",
-    "test": "jasmine JASMINE_CONFIG_PATH=spec/jasmine.json",
+    "test": "jasmine JASMINE_CONFIG_PATH=./jasmine.json",
     "fullinstall": "npm install && bower install"
   },
   "dependencies": {
