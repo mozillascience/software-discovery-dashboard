@@ -6,7 +6,7 @@
     "start": "gulp watch",
     "build": "gulp build",
     "serve": "gulp build && node dist/lib/server",
-    "test": "jasmine JASMINE_CONFIG_PATH=spec/jasmine.json",
+    "test": "gulp test",
     "fullinstall": "npm install && bower install"
   },
   "dependencies": {
