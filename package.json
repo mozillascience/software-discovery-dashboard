@@ -34,7 +34,6 @@
     "gulp-jasmine": "^2.3.0",
     "gulp-nodemon": "^2.0.6",
     "gulp-sass": "^2.2.0",
-    "jasmine": "^2.4.1",
     "require-dir": "^0.3.0",
     "vinyl-source-stream": "^1.1.0"
   }

@@ -15,6 +15,7 @@ export default {
       jsxMain: './public/javascripts/app.jsx',
       images: './public/images/**/*'
     },
-    server: './lib/**/*.js'
+    server: './lib/**/*.js',
+    tests: './spec/**/*[sS]pec.js'
   }
 }

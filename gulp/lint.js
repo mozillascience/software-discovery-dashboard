@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import eslint from 'gulp-eslint';
+import paths from './util/paths';
 
 const config = {
   extends: "airbnb",
@@ -8,7 +9,7 @@ const config = {
 }
 
 gulp.task('lint', () => {
-  return gulp.src(['lib/*.js', 'public/javascripts/**'])
+  return gulp.src([paths.source.server, paths.source.public.javascripts])
     .pipe(eslint(config))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());

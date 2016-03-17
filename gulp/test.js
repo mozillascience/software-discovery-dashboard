@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import jasmine from 'gulp-jasmine';
+import paths from './util/paths';
 
 const config = {
     spec_dir: './spec',
@@ -9,6 +10,6 @@ const config = {
 }
 
 gulp.task('test', () => {
-  return gulp.src('./spec/**/*[sS]pec.js')
+  return gulp.src(paths.source.tests)
     .pipe(jasmine({ config }));
 });
