@@ -43,6 +43,7 @@ describe('Fighshare L2 Article Presentor Parser Suite', () => {
   it('converts Figshare authors to codemeta authors', () => {
     expect(convertedArticle.author.length).toBe(1);
     expect(convertedArticle.author[0].name).toBe(figshareArticle.authors[0].full_name);
+    expect(convertedArticle.author[0]['@id']).toBe('http://orcid.org/0000-0002-4106-2545');
   })
 
 })
