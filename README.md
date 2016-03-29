@@ -21,7 +21,7 @@ To run the Software Discovery Dashboard locally, run these steps:
 
 ##Communication
 Gitter:  https://gitter.im/mozillascience/SoftwareDiscoveryDashboard  
-Channel: #SoftwareDiscoveryDashboard 
+Channel: #SoftwareDiscoveryDashboard
 
 ##Project Leadership
 Technical Lead : Luke Coy
