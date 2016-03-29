@@ -1,9 +1,7 @@
 node_modules/
-bower_components/
-*.css
 .sass-cache/
 .DS_Store
 npm-debug.log
 bower_components/
-authconfig.json
 dist/
+*.css
