@@ -19,6 +19,9 @@ To run the Software Discovery Dashboard locally, run these steps:
 2. run `npm run fullinstall`
 3. run `npm start` and open up `http://localhost:3000/` in your favourite web browser!
 
+## Style Guide
+This project follows the [Airbnb Style Guide](https://github.com/airbnb/javascript).
+
 ##Communication
 Gitter:  https://gitter.im/mozillascience/SoftwareDiscoveryDashboard  
 Channel: #SoftwareDiscoveryDashboard
