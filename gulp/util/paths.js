@@ -1,6 +1,7 @@
 export default {
   build: {
     public: {
+      html: './dist/public',
       stylesheets: './dist/public/stylesheets',
       javascripts: './dist/public/javascripts',
       images: './dist/public/images'
@@ -10,6 +11,7 @@ export default {
 
   source: {
     public: {
+      html: './public/*.html',
       stylesheets: './public/stylesheets/**/*.scss',
       javascripts: './public/javascripts/**/*.js',
       jsxMain: './public/javascripts/app.jsx',

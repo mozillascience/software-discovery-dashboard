@@ -236,6 +236,10 @@ footer{
 	}
 }
 
+.repository-selection > button:focus {
+	background-color: #FFFFFF;
+}
+
 .center {
      margin:0 auto;
      text-align:center;
