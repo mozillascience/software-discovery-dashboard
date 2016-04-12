@@ -6,14 +6,16 @@ $science-blue: #C9E3F6;
 $spacer-orange: #F7C4A6;
 
 //HTML Elements
+
 html, body {
 	font: 14px "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin:0;
-  	padding:0;
-  	height:100%;
+  padding:0;
+  height: 100%;
 }
 body{
-	background-color: #fff;;
+	background-color: #fff;
+	margin-bottom:70px;
 	h1, h2, h3, h4, h5{
 		font-family: 'Fira Sans', Arial, "Lucida Grande", sans-serif;
 		font-weight:800;
@@ -25,13 +27,52 @@ a {
 }
 .main{
 	width:100%;
-	min-height:50%;
+	min-height:68%;
 	display: flex;
  	align-items: center;
  	justify-content: center;
+ 	//overflow:auto;
+
  	div.main-content{
  		width: 80%;
+ 		min-height:80%;
  	}
+ 	div.clear{
+ 		clear:both;
+ 		font-size:0;
+ 	}
+ 	div.results{
+ 		max-height:50%;
+ 	}
+ 	ul{
+ 		list-style-type:none;
+ 		&.resultsList{
+ 			//background-color: #eee;
+ 			min-width:20%;
+ 			max-width:80%;
+ 			li{
+ 				h1{
+ 					margin-bottom:0px;
+ 				}
+ 				margin-bottom: 50px;
+ 			}
+ 		}
+ 		&.keywordsList{
+ 			margin-left:-45px;
+ 			margin-top:-15px;
+ 			float:left;
+ 			li{
+ 				float: left;
+ 				display: block;
+ 				overflow: hidden;
+ 				margin:5px;
+ 				&.keyword{
+ 					color: #666;
+ 				}
+ 			}
+ 		}
+ 	}
+
  	form{
  		margin:0 auto;
  		max-width: 40%;
@@ -121,7 +162,6 @@ footer{
 		color:white;
 		font-size: 1.0em;
 		bottom:0px;
-		position:absolute;
 		h3{
 			font-family: 'Fira Sans', Arial, "Lucida Grande", sans-serif;
 			font-weight: 300;
