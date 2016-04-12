@@ -108,6 +108,11 @@ form{
 		    line-height: 1em;
 		}
 	}
+	div{
+		&.select-div{
+			width:24%;
+		}
+	}
 }
 
 footer{
