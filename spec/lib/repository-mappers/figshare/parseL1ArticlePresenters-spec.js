@@ -7,6 +7,11 @@ it('parses all articles figshare returns', () =>
   expect(convertedArticles.length).toBe(2)
 );
 
+it('parses Figshare article IDs', () => {
+  expect(convertedArticles[0].id).toBe(figshareL1Articles[0].id);
+  expect(convertedArticles[1].id).toBe(figshareL1Articles[1].id);
+});
+
 it('converts Figshare article DOIs to codemeta identifier', () => {
   expect(convertedArticles[0].identifier).toBe(figshareL1Articles[0].doi);
   expect(convertedArticles[1].identifier).toBe(figshareL1Articles[1].doi);
