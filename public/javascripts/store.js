@@ -10,6 +10,9 @@ const INITIAL_STATE = {
     FigShare: false,
     Zenodo: false,
   },
+  query: {
+    Author : 'Placeholder Text for Author',
+  },
 };
 
 const store = createStore(
