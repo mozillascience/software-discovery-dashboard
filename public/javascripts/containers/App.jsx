@@ -16,18 +16,18 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        {/*<div className="text-center">
+        <div className="text-center">
           <h1>Software Discovery Dashboard</h1>
         </div>
 
         <div id="form" className="form-div center">
-          <form>
-            <div className="form-group">
+          <form className="pure-form">
+            <div>
               <RepoFilter />
             </div>
-            <div className="input-group">
-              <div className="input-group-btn select-div">
-                <select className="form-control">
+            <div className="">
+              <div className="select-borderless">
+                <select className="attribute-select">
                   <option value="author">Author</option>
                   <option value="identifier">Identifier</option>
                   <option value="datePublished">Date Published</option>
@@ -38,16 +38,14 @@ class App extends React.Component {
                   <option value="license">License</option>
                   <option value="title">Title</option>
                   <option value="version">Version</option>
-                </select>
+                </select><i className="fa fa-caret-down"></i>
               </div>
-              <input type="text" className="form-control"></input>
-              <span className="input-group-btn">
-                <button className="btn btn-default" type="button">+</button>
-              </span>
+              <input type="text" className="search-field"></input>
+              <button className="pure-button add-button" type="button">+</button>
             </div>
           </form>
-        </div>*/}
-        <div className="results">
+        </div>
+        {/*<div className="results">
           <ul className="resultsList">
             <li>
               <div className="result">
@@ -71,7 +69,7 @@ class App extends React.Component {
             </li>
 
           </ul>
-        </div>
+        </div>*/}
       </div>
     )
   }

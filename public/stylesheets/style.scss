@@ -85,10 +85,90 @@ a {
 			&.searchbar.form-control{
 				width:100%;
 			}
+			&.search-field{
+				border-radius:0px;
+				min-width:60%;
+			}
  		}
  		button.search-button{
  			margin-top:20px;
  			min-width: 150px;
+ 		}
+ 		/* div.select-borderless{
+ 			width:80px;
+ 			overflow:hidden;
+ 			background-color:#E9E9E9;
+ 			select.attribute-select{
+ 				-webkit-appearance: none;
+	     	-moz-appearance: none;
+	      appearance: none;
+		    border-radius: 0;
+		    padding-left: .5em;
+		    position: relative;
+		    z-index: 10;
+	      background-color:#E9E9E9;
+	      border-radius: 2px 0px 0px 2px;
+	 			height:2.3em;
+	 			width:100%;
+ 			}
+ 			i{
+ 				position: absolute;
+    		right: .5em;
+    		top: 1px;
+    		z-index: 5;
+    		color: black;
+    	}
+ 		} */
+ 		.select-borderless{
+ 			width: 100px;
+		  overflow: hidden;
+		  position: relative;
+		  background: #E9E9E9;
+		  display:inline-block;
+		  select.attribute-select{
+		  	-webkit-appearance: none;
+		  	-moz-appearance: none;
+		  	appearance: none;
+		  	background: transparent;
+    		width: 100%;
+    		border: 1px solid #ccc;
+    		border-radius: 2px 0px 0px 2px;
+    		padding-left: .5em;
+    		position: relative;
+    		z-index: 10;
+    		height:2.3em;
+    		margin-right:-1px;
+		  }
+	    &:-moz-focusring{
+	      color: transparent;
+	      text-shadow: 0 0 0 black;
+	    }
+	    &::-ms-expand{
+	      display: none;
+	    }
+
+	 		i{
+		    position: absolute;
+		    right: .5em;
+		    top: .75em;
+		    z-index: 5;
+		    color: black;
+		  }
+ 		}
+		 
+  
+
+ 		button.add-button{
+ 			margin:0px;
+ 			margin-left:-0.5px;
+ 			margin-top:-1px;
+ 			padding-top:0.6em;
+ 			padding-bottom:0.55em;
+ 			background-color:#E9E9E9;
+ 			color:#000;
+ 			border:1px solid #ccc;
+ 			border-radius: 0px 2px 2px 0px;
+
  		}
  	}
 }
