@@ -67,8 +67,12 @@ class App extends React.Component {
                 <div className="clear"></div>
               </div>
             </li>
-
           </ul>
+          <div className="pagination">
+            <a className=""><i className="fa fa-caret-left"></i></a>
+            <label className="page-number">1</label>
+            <a className=""><i className="fa fa-caret-right"></i></a>
+          </div>
         </div>*/}
       </div>
     )

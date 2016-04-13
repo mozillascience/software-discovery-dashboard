@@ -43,6 +43,29 @@ a {
  	}
  	div.results{
  		max-height:50%;
+ 		display:block;
+ 		div.pagination{
+ 			text-align: center;
+ 			width:80%;
+ 			margin:0 auto;
+ 			margin-bottom:50px;
+ 			a{
+ 				margin:20px;
+ 				background-color:transparent;
+ 				color:#000;
+ 				padding:10px;
+ 				font-size:25px;
+ 			}
+ 			label.page-number{
+ 				font-size:25px;
+ 				font-weight:normal;
+ 			}
+ 			a:hover{
+ 				background-color:transparent;
+ 				color:#777;
+ 				
+ 			}
+ 		}
  	}
  	ul{
  		list-style-type:none;
@@ -120,7 +143,7 @@ a {
     	}
  		} */
  		.select-borderless{
- 			width: 100px;
+ 			width: 125px;
 		  overflow: hidden;
 		  position: relative;
 		  background: #E9E9E9;
