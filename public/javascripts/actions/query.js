@@ -2,10 +2,9 @@ export const ADD_FIELD = 'ADD_FIELD';
 export const REMOVE_FIELD = 'REMOVE_FIELD';
 export const UPDATE_FIELD = 'UPDATE_FIELD';
 
-export function addField(attribute) {
+export function addField() {
   return dispatch => dispatch({
     type: ADD_FIELD,
-    attribute,
   });
 }
 

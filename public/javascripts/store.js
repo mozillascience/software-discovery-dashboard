@@ -11,7 +11,8 @@ const INITIAL_STATE = {
     Zenodo: false,
   },
   query: {
-    Author: 'Placeholder Text for Author',
+    author: 'Author',
+    id: 'Placeholder Text for ID',
   },
 };
 
