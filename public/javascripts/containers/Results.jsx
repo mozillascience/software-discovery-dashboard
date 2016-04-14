@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Result from '../components/Result';
+import { findKey } from '../util/objectUtils';
 
 function mapStateToProps(state) {
   return {
+    repo: state.repoFilters,
     query: state.query,
   };
 }
@@ -37,12 +39,23 @@ class Results extends React.Component {
       },
     ]
 
+    // TODO this will change when querying multiple sources is supported
+    const queryInputString =
+      'sources:' + findKey(this.props.repo, true) + ' ' +
+      Object.keys(this.props.query).map(a => {
+        return a + ':' + this.props.query[a]
+          .trim()
+          .replace(/,/g, ' ')
+          .replace(/\s+/g, ',');
+      }).join(' ');
+
     return (
       <div className="results-container">
         <form className="pure-form results-query-summary">
           <fieldset>
             <input type="text"
               className="results-query-input"
+              defaultValue={queryInputString}
               ref="results-query-input"/>
           </fieldset>
         </form>

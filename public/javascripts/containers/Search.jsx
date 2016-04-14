@@ -21,7 +21,6 @@ class Search extends React.Component {
   }
 
   search(e) {
-    e.preventDefault();
     Object.keys(this.refs).forEach(f => {
       this.props.dispatch(updateField(f, this.refs[f].value()));
     });
