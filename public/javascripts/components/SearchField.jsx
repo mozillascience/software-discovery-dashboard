@@ -16,6 +16,8 @@ class SearchField extends React.Component {
   }
 
   _onChange(e) {
+    this.props.removeField(this.state.selectedAttribute);
+    this.props.addField(e.target.value);
     this.setState({selectedAttribute: e.target.value});
   }
 
@@ -33,7 +35,7 @@ class SearchField extends React.Component {
         </div>
         <input type="text" className="search-field" ref="search-input"></input>
         <button className="pure-button add-button"
-                onClick={this.props.addField}>+</button>
+                onClick={this.props.addField.bind(this, null)}>+</button>
         {this.props.withDelete ?
           <button className="pure-button remove-button"
             onClick={

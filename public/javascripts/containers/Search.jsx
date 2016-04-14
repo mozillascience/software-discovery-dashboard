@@ -23,11 +23,12 @@ class Search extends React.Component {
     e.preventDefault();
   }
 
-  addField() {
-    this.props.dispatch(addField());
+  addField(attribute) {
+    this.props.dispatch(addField(attribute));
   }
 
   removeField(attribute) {
+    console.log('remove: ' + attribute);
     this.props.dispatch(removeField(attribute));
   }
 

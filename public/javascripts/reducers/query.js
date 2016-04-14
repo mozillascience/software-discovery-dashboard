@@ -13,12 +13,12 @@ function firstUnusedAttribute(state) {
 
 export default function query(state = {}, action) {
   const copiedState = Object.assign({}, state);
-  const firstUnused = firstUnusedAttribute(state);
+  const addedField = action.attribute || firstUnusedAttribute(state);
 
   switch (action.type) {
     case ADD_FIELD:
-      if (firstUnused)
-        return Object.assign(copiedState, { [firstUnused]: '' });
+      if (addedField)
+        return Object.assign(copiedState, { [addedField]: '' });
       else
         return state;
 
