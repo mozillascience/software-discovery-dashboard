@@ -1,40 +1,40 @@
 {
-	"responseHeader": {
-		"status": 0,
-		"QTime": 105,
-		"params": {
-			"facet": "true",
-			"fl": "id,title,origin,pubDate,dateUploaded,abstract,beginDate,endDate",
-			"facet.mincount": "1",
-			"json": "",
-			"facet.sort": "index",
-			"start": "0",
-			"q": "    -obsoletedBy:* biology formatType:METADATA  ",
-			"facet.limit": "-1",
-			"wt": "json",
-			"rows": "1"
-		}
-	},
-	"response": {
-		"numFound": 56771,
-		"start": 0,
-		"docs": [{
-			"id": "doi:10.5063/F1T43R0H",
-			"dateUploaded": "2014-09-07T10:14:04.665Z",
-			"abstract": "All data for Paper in Freshwater Biology by Hammill, Atwood, Corvalan and Srivastava",
-			"title": "freshwater Biology 2014",
-			"beginDate": "1997-01-01T00:00:00Z",
-			"endDate": "2012-01-01T00:00:00Z",
-			"pubDate": "2014-09-07T00:00:00Z",
-			"origin": ["NA", "Edd Hammill"]
-		}]
-	},
-	"facet_counts": {
-		"facet_queries": {},
-		"facet_fields": {},
-		"facet_dates": {},
-		"facet_ranges": {},
-		"facet_intervals": {},
-		"facet_heatmaps": {}
-	}
-}
+  "responseHeader": {
+    "status": 0,
+    "QTime": 105,
+    "params": {
+      "facet": "true",
+      "fl": "id,title,origin,pubDate,dateUploaded,abstract,beginDate,endDate",
+      "facet.mincount": "1",
+      "json": "",
+      "facet.sort": "index",
+      "start": "0",
+      "q": "    -obsoletedBy:* biology formatType:METADATA  ",
+      "facet.limit": "-1",
+      "wt": "json",
+      "rows": "1"
+    }
+  },
+  "response": {
+    "numFound": 56771,
+    "start": 0,
+    "docs": [{
+      "id": "doi:10.5063/F1T43R0H",
+      "dateUploaded": "2014-09-07T10:14:04.665Z",
+      "abstract": "All data for Paper in Freshwater Biology by Hammill, Atwood, Corvalan and Srivastava",
+      "title": "freshwater Biology 2014",
+      "beginDate": "1997-01-01T00:00:00Z",
+      "endDate": "2012-01-01T00:00:00Z",
+      "pubDate": "2014-09-07T00:00:00Z",
+      "origin": ["NA", "Edd Hammill"]
+      }]
+    },
+    "facet_counts": {
+      "facet_queries": {},
+      "facet_fields": {},
+      "facet_dates": {},
+      "facet_ranges": {},
+      "facet_intervals": {},
+      "facet_heatmaps": {}
+    }
+  }
