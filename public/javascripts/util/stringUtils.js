@@ -1,4 +1,4 @@
-function normalizeCommaSeparated (str) {
+function normalizeCommaSeparated(str) {
   return str
     .trim()
     .replace(/,/g, ' ')

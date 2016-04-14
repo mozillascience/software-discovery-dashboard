@@ -14,7 +14,7 @@ const INITIAL_STATE = {
   query: {
     keywords: '',
   },
-  results: {}
+  results: {},
 };
 
 const store = createStore(

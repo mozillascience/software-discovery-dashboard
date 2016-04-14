@@ -14,13 +14,13 @@ export default function repoFilter(state = {}, action) {
   switch (action.type) {
     case SELECT_REPO:
       return Object.assign(allDeselected, { [action.repo]: true });
-      //return Object.assign({}, state, { [action.repo]: true });
+      // return Object.assign({}, state, { [action.repo]: true });
 
     case DESELECT_REPO:
       // TODO until querying over multiple sources is supported,
       // don't allow deselecting; a new source must be selected
       return state;
-      //return Object.assign({}, state, { [action.repo]: false });
+      // return Object.assign({}, state, { [action.repo]: false });
 
 
     default:

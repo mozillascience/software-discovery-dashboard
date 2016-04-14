@@ -5,7 +5,7 @@ export const UPDATE_FIELD = 'UPDATE_FIELD';
 export function addField(attribute) {
   return dispatch => dispatch({
     type: ADD_FIELD,
-    attribute
+    attribute,
   });
 }
 

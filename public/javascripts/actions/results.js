@@ -16,10 +16,10 @@ function addResultsSuccess(results) {
   };
 }
 
-function addResultsFailure() {
+function addResultsFailure(err) {
   return {
     type: ADD_RESULTS_FAILURE,
-    err
+    err,
   };
 }
 
@@ -30,5 +30,5 @@ export function performQuery(source, query) {
     }, err => {
       dispatch(addResultsFailure(err));
     });
-  }
+  };
 }

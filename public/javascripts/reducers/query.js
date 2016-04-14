@@ -2,7 +2,7 @@ import { ADD_FIELD, REMOVE_FIELD, UPDATE_FIELD } from '../actions/query';
 import { ATTRIBUTES } from '../constants';
 
 function firstUnusedAttribute(state) {
-  var firstUnused = '';
+  let firstUnused = '';
 
   ATTRIBUTES.forEach(a => {
     if (!firstUnused && state[a] === undefined) firstUnused = a;
@@ -17,10 +17,8 @@ export default function query(state = {}, action) {
 
   switch (action.type) {
     case ADD_FIELD:
-      if (addedField)
-        return Object.assign(copiedState, { [addedField]: '' });
-      else
-        return state;
+      return addedField ?
+        Object.assign(copiedState, { [addedField]: '' }) : state;
 
     case UPDATE_FIELD:
       return Object.assign(copiedState, { [action.attribute]: action.value });
