@@ -5,6 +5,7 @@ export default function repoFilter(state = {}, action) {
   const allDeselected = {
     DataCite: false,
     GitHub: false,
+    DataONE: false,
     BitBucket: false,
     FigShare: false,
     Zenodo: false,

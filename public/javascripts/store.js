@@ -4,8 +4,9 @@ import thunk from 'redux-thunk';
 
 const INITIAL_STATE = {
   repoFilters: {
-    DataCite: true,
+    DataCite: false,
     GitHub: false,
+    DataONE: true,
     BitBucket: false,
     FigShare: false,
     Zenodo: false,
