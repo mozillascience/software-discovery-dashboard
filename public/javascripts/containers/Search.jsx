@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import { addField, removeField, updateField } from '../actions/query';
 import SearchField from '../components/SearchField';
 
@@ -21,6 +22,9 @@ class Search extends React.Component {
 
   search(e) {
     e.preventDefault();
+    Object.keys(this.refs).forEach(f => {
+      this.props.dispatch(updateField(f, this.refs[f].value()));
+    });
   }
 
   addField(attribute) {
@@ -28,7 +32,6 @@ class Search extends React.Component {
   }
 
   removeField(attribute) {
-    console.log('remove: ' + attribute);
     this.props.dispatch(removeField(attribute));
   }
 
@@ -43,17 +46,20 @@ class Search extends React.Component {
         value={query[attribute]}
         withDelete={count++ > 0}
         addField={this.addField}
-        removeField={this.removeField}/>
+        removeField={this.removeField}
+        ref={attribute}/>
     });
 
     return (
       <div>
         {this.fields}
-        <button
-            className="pure-button search-button"
-            onClick={this.search}>
-          Search
-        </button>
+        <Link to="/results">
+          <button
+              className="pure-button search-button"
+              onClick={this.search}>
+            Search
+          </button>
+        </Link>
       </div>
     );
   }

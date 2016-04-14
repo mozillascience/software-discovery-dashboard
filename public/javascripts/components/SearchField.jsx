@@ -21,6 +21,10 @@ class SearchField extends React.Component {
     this.setState({selectedAttribute: e.target.value});
   }
 
+  value() {
+    return this.refs.searchInput.value;
+  }
+
   // TODO this function and the interactions it performs are quite ugly,
   // could do with a good kneading
   render() {
@@ -35,7 +39,7 @@ class SearchField extends React.Component {
             })}
           </select><i className="fa fa-caret-down"></i>
         </div>
-        <input type="text" className="search-field" ref="search-input"></input>
+        <input type="text" className="search-field" ref="searchInput"></input>
         <button className="pure-button add-button"
                 onClick={this.props.addField.bind(this, null)}>+</button>
         {this.props.withDelete ?
