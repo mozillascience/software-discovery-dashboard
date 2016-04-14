@@ -1,0 +1,62 @@
+[{
+  "minted": "2015-01-14T19:35:44Z",
+  "refQuality": false,
+  "has_metadata": true,
+  "is_active": true,
+  "datacentre_symbol": "CERN.ZENODO",
+  "uploaded": "2015-01-14T19:35:43Z",
+  "allocator_symbol": "CERN",
+  "allocator": "CERN - CERN - European Organization for Nuclear Research",
+  "allocator_facet": "CERN - CERN - European Organization for Nuclear Research",
+  "namespace": "http://datacite.org/schema/kernel-3",
+  "datacentre": "CERN.ZENODO - ZENODO - Research. Shared.",
+  "datacentre_facet": "CERN.ZENODO - ZENODO - Research. Shared.",
+  "created": "2015-01-14T19:35:43Z",
+  "updated": "2015-01-14T20:05:58Z",
+  "prefix": "10.5281",
+  "has_media": false,
+  "dataset_id": "4606147",
+  "doi": "10.5281/ZENODO.13950",
+  "schema_version": "3",
+  "subject": [
+    "git, introducción, VCS, github, CSHL"
+  ],
+  "relatedIdentifier": [
+    "IsSupplementTo:URL:https://github.com/csluesocc/introduccionGit/tree/v1.0.0"
+  ],
+  "alternateIdentifier": [
+    "URL:http://zenodo.org/record/13950"
+  ],
+  "rights": [
+    "Open Access",
+    "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+  ],
+  "descriptionType": [
+    "Abstract"
+  ],
+  "dateType": [
+    "Issued"
+  ],
+  "date": [
+    "2015-01-14"
+  ],
+  "creator": [
+    "Carlos Cárcamo"
+  ],
+  "publisher": "ZENODO",
+  "resourceType": "book",
+  "title": [
+    "introduccion a Git: First release"
+  ],
+  "description": [
+    "Primera versión de la guía de introducción a git."
+  ],
+  "publicationYear": "2015",
+  "rightsURI": [
+    "info:eu-repo/semantics/openAccess",
+    "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  ],
+  "resourceTypeGeneral": "Text",
+  "_version_": 1526440339959709700,
+  "indexed": "2016-02-17T16:35:47.746Z"
+}]
