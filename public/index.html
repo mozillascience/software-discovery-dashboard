@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Software Discovery Dashboard</title>
+        <link rel="stylesheet" href="/stylesheets/style.css"/>
+        <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300, 400, 800"/>
+
+        <script src="/javascripts/app.js"></script>
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid navbar-content">
+                <link rel="stylesheet" href="/stylesheets/tabzilla.css"/>
+                <div id="tabzilla">
+                    <a href="https://www.mozilla.org/">mozilla</a>
+                </div>
+                <div class="navbar-header">
+                    <a class="navbar-brand-link navbar-brand" href="#">
+                        <img id="moz-logo" class="nav-logo" src="/images/logo.png" alt="logo" width="260px" height="65px"/>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <div id="main" class="main">
+            <!-- this is where React will mount -->
+            <div id="main-content" class="main-content"></div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-image">
+                <img class="footer-design" src="/images/footer.png" width="200px" height="205px"/>
+            </div>
+            <div class="footer-background">
+                <div class="footer-text">
+                    <div class="row">
+                        <div class="col-xs-5 footer-content">
+                            <ul class="footer-list">
+                                <li>
+                                    <img id="moz-footer-logo" src="/images/moz-logo.png" alt="mozilla"/>
+                                </li>
+                                <li>Terms of Service</li>
+                                <li>Privacy Policy</li>
+                                <li>Code of Conduct</li>
+                                <li>Report a Bug</li>
+                                <li>Creative Commons Attribution 4.0 International License</li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-2 footer-content social-media">
+                            <ul class="footer-list">
+                                <li><h5>KEEP IN TOUCH</h5></li>
+                                <li>
+                                    <a href="http://forum.mozillascience.org/">
+                                        <span class="fa fa-comments"></span>
+                                        <span>Forum</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://twitter.com/MozillaScience">
+                                        <span class="fa fa-twitter"></span>
+                                        <span>@MozillaScience</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://wiki.mozilla.org/ScienceLab/Calls">
+                                        <span class="fa fa-phone"></span>
+                                        <span>Community Call</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.mozillascience.org/feed">
+                                        <span class="fa fa-rss"></span>
+                                        <span>RSS Feed</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="irc://irc.mozilla.org/sciencelab">
+                                        <b>irc</b>
+                                        <span>#ScienceLab</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-3 footer-content subscribe-footer">
+                            <h5>MAILING LIST</h5>
+                            <p class="small-text">Occasional e-mail updates & news</p>
+                            <form class="form-inline footer-form" action="https://mail.mozilla.org/subscribe/mozillascience" method="post">
+                                <input class="form-control footer-signup" placeholder="Sign up with your e-mail" name="email"/>
+                                <button class="pure-button pure-button-primary" type="submit">
+                                    <i class="fa fa-caret-right"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h3 class="footer-header">
+                            <ul class="footer-list footer-links">
+                                <li><a href="#">Home</a></li>
+                                <li class="spacer"></li>
+                                <li><a href="#">About</a></li>
+                                <li class="spacer"></li>
+                                <li><a href="#">Blog</a></li>
+                                <li class="spacer"></li>
+                                <li><a href="#">Training</a></li>
+                                <li class="spacer"></li>
+                                <li><a href="#">Community</a></li>
+                                <li class="spacer"></li>
+                                <li><a href="#">Collaborate</a></li>
+                            </ul>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
