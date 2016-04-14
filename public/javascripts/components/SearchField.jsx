@@ -11,7 +11,7 @@ class SearchField extends React.Component {
 
   componentWillMount() {
     this.state = {
-      selectedAttribute: this.props.attribute || 'author',
+      selectedAttribute: this.props.attribute,
     };
   }
 
