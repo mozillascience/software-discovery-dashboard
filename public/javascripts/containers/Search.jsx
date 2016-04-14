@@ -16,6 +16,7 @@ class Search extends React.Component {
 
     this.search = this.search.bind(this);
     this.addField = this.addField.bind(this);
+    this.removeField = this.removeField.bind(this);
   }
 
   search(e) {
@@ -24,8 +25,12 @@ class Search extends React.Component {
   }
 
   addField() {
-    console.log('add field');
     this.props.dispatch(addField());
+  }
+
+  removeField(attribute) {
+    console.log('remove field');
+    this.props.dispatch(removeField(attribute));
   }
 
   render() {
@@ -38,7 +43,8 @@ class Search extends React.Component {
         attribute={attribute}
         value={query[attribute]}
         withDelete={count++ > 0}
-        addField={this.addField}/>
+        addField={this.addField}
+        removeField={this.removeField}/>
     });
 
     return (
