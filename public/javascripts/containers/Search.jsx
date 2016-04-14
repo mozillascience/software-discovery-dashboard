@@ -21,7 +21,6 @@ class Search extends React.Component {
 
   search(e) {
     e.preventDefault();
-    console.log('search!');
   }
 
   addField() {
@@ -29,7 +28,6 @@ class Search extends React.Component {
   }
 
   removeField(attribute) {
-    console.log('remove field');
     this.props.dispatch(removeField(attribute));
   }
 

@@ -1,21 +1,8 @@
 import { ADD_FIELD, REMOVE_FIELD, UPDATE_FIELD } from '../actions/query';
-
-const ATTRIBUTES = [
-  'author',
-  'id',
-  'datePublished',
-  'dateModified',
-  'dateCreated',
-  'description',
-  'keywords',
-  'license',
-  'title',
-  'version',
-];
+import { ATTRIBUTES } from '../constants';
 
 function firstUnusedAttribute(state) {
   var firstUnused = '';
-  console.log(state);
 
   ATTRIBUTES.forEach(a => {
     if (!firstUnused && state[a] === undefined) firstUnused = a;

@@ -1,17 +1,5 @@
 import React from 'react';
-
-const ATTRIBUTES = {
-  author: 'Author',
-  id: 'Identifier',
-  datePublished: 'Date Published',
-  dateModified: 'Date Modified',
-  dateCreated: 'Date Created',
-  description: 'Description',
-  keywords: 'Keywords',
-  license: 'License',
-  title: 'Title',
-  version: 'Version',
-};
+import { ATTRIBUTES, ATTRIBUTES_DISPLAY } from '../constants';
 
 class SearchField extends React.Component {
 
@@ -38,8 +26,8 @@ class SearchField extends React.Component {
           <select className="attribute-select"
               value={this.state.selectedAttribute}
               onChange={this._onChange}>
-            {Object.keys(ATTRIBUTES).map(k => {
-              return <option key={k} value={k}>{ATTRIBUTES[k]}</option>
+            {ATTRIBUTES.map(k => {
+              return <option key={k} value={k}>{ATTRIBUTES_DISPLAY[k]}</option>
             })}
           </select><i className="fa fa-caret-down"></i>
         </div>
