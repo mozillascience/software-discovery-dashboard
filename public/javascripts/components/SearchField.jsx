@@ -21,6 +21,8 @@ class SearchField extends React.Component {
     this.setState({selectedAttribute: e.target.value});
   }
 
+  // TODO this function and the interactions it performs are quite ugly,
+  // could do with a good kneading
   render() {
     return (
       <div>
