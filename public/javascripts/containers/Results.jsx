@@ -48,6 +48,11 @@ class Results extends React.Component {
             }) : <div>No Results to Display</div>}
           </ul>
         </div>
+        <div className="results-pagination">
+          <a className=""><i className="fa fa-caret-left"></i></a>
+          <label className="page-number">1</label>
+          <a className=""><i className="fa fa-caret-right"></i></a>
+        </div>
       </div>
     );
   }
