@@ -40,13 +40,14 @@ class SearchField extends React.Component {
           </select><i className="fa fa-caret-down"></i>
         </div>
         <input type="text" className="search-field" ref="searchInput"></input>
-        <button className="pure-button add-button"
-                onClick={this.props.addField.bind(this, null)}>+</button>
         {this.props.withDelete ?
           <button className="pure-button remove-button"
             onClick={
               this.props.removeField.bind(this, this.state.selectedAttribute)
             }>-</button> : ''}
+        <button className="pure-button add-button"
+                onClick={this.props.addField.bind(this, null)}>+</button>
+        
       </div>
     );
   }
