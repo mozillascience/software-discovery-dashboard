@@ -6,7 +6,7 @@ const config = {
   extends: 'airbnb',
   plugins: [ 'react' ],
   env: { es6: true },
-  rules: {'no-console': 0},
+  rules: {'no-console': 0, 'prefer-template': 0},
 }
 
 gulp.task('lint', () => {

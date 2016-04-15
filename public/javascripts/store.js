@@ -6,10 +6,18 @@ const INITIAL_STATE = {
   repoFilters: {
     DataCite: false,
     GitHub: false,
+    DataONE: true,
     BitBucket: false,
     FigShare: false,
     Zenodo: false,
   },
+  query: {
+    fields: {
+      keywords: '',
+    },
+    page: 1,
+  },
+  results: {},
 };
 
 const store = createStore(

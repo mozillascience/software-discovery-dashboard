@@ -1,8 +1,13 @@
 'use strict';
 
 import React from 'react';
+import { SUPPORTED_REPOS } from '../constants';
 
 class RepoFilterButton extends React.Component {
+
+  repoUnsupported (repo) {
+    return SUPPORTED_REPOS.indexOf(repo) === -1;
+  }
 
   render () {
     const btnClassName = this.props.selected ?
@@ -12,7 +17,8 @@ class RepoFilterButton extends React.Component {
       <button className={btnClassName}
               type="button"
               style={{'outline':'none'}}
-              onClick={this.props.onClick}>
+              onClick={this.props.onClick}
+              disabled={this.repoUnsupported(this.props.repo)}>
         {this.props.repo}
       </button>
     )
