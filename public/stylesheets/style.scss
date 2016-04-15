@@ -74,6 +74,9 @@ a {
       font-weight:normal;
       margin:0 10px;
     }
+    label.page-number:hover{
+      cursor:pointer;
+    }
     label.page-number.selected-page{
       font-weight:bold;
     }

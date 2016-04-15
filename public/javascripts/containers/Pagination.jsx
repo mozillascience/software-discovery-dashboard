@@ -15,18 +15,23 @@ class Pagination extends React.Component {
   constructor() {
     super();
 
+    this.set = this.set.bind(this);
     this.decrement = this.decrement.bind(this);
     this.increment = this.increment.bind(this);
   }
 
+  set(page) {
+    this.props.dispatch(changePage(page));
+  }
+
   decrement() {
     if (this.props.query.page > 1) {
-      this.props.dispatch(changePage(this.props.query.page - 1));
+      this.set(this.props.query.page - 1);
     }
   }
 
   increment() {
-    this.props.dispatch(changePage(this.props.query.page + 1));
+    this.set(this.props.query.page + 1);
   }
 
   render() {
@@ -34,7 +39,8 @@ class Pagination extends React.Component {
     for (var i = 1; i <= 10; i++) {
       const classes = 'page-number ' + (this.props.query.page === i ?
         'selected-page' : '');
-      pages.push(<label className={classes} key={i}>{i}</label>);
+      pages.push(<label onClick={this.set.bind(this, i)}
+                        className={classes} key={i}>{i}</label>);
     }
 
     return (
