@@ -22,7 +22,7 @@ class Result extends React.Component {
 
     const dateString = this.getDateString(result);
     const source = result.source ?
-      <a src={result.source}>{result.source}</a> : '';
+      <a href={result.source}>{result.source}</a> : '';
     const description = result.description ?
       <p>{result.description}</p> : '';
     const keywords = result.keywords ?
@@ -35,9 +35,15 @@ class Result extends React.Component {
     return (
       <li>
         <div className="result">
-          <h1>{result.title}</h1>
-          <span>{dateString}</span>
+          <h1>
+            <a className="result-title-link"
+                href={result.source}
+                target="_blank">
+              {result.title}
+            </a>
+          </h1>
           {source}
+          <div>{dateString}</div>
           {description}
           {keywords}
         </div>
