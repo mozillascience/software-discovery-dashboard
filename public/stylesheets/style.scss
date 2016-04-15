@@ -87,6 +87,7 @@ a {
  			li{
  				h1{
  					margin-bottom:0px;
+ 					font-size:25px;
  				}
  				margin-bottom: 50px;
  			}
@@ -95,13 +96,15 @@ a {
  			margin-left:-45px;
  			margin-top:-15px;
  			float:left;
+ 			margin-bottom:25px;
  			li{
  				float: left;
  				display: block;
  				overflow: hidden;
  				margin:5px;
  				&.keyword{
- 					color: #666;
+ 					color: #D9615B;
+ 					font-style:italic;
  				}
  			}
  		}
@@ -130,6 +133,9 @@ a {
  		button.search-button{
  			margin-top:20px;
  			min-width: 150px;
+ 			background-color: #E9E9E9;
+
+
  		}
  		/* div.select-borderless{
  			width:80px;
@@ -204,16 +210,14 @@ a {
  			outline: none;
  			border:1px solid #ccc;
  			border-radius: 0px 2px 2px 0px;
- 		}
-
- 		button.add-button {
  			background-color: #E9E9E9;
  			margin-left:-0.5px;
  			margin-top:-1px;
- 		}
 
- 		button.remove-button {
- 			background-color: red;
+ 		}
+ 		button.remove-button{
+ 			border-radius: 0px;
+ 			width:38px;
  		}
  	}
 }

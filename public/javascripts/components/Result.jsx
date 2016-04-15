@@ -15,7 +15,7 @@ class Result extends React.Component {
     const keywords = result.keywords ?
       <ul className="keywords-list">
         {result.keywords.map(k => {
-          return <li key={k}>{k}</li>
+          return <li className="keyword" key={k}>{k}</li>
         })}
       </ul> : '';
 
