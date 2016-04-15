@@ -6,11 +6,11 @@ import {
   CHANGE_PAGE,
 } from '../actions/query';
 
-function firstUnusedAttribute(state) {
+function firstUnusedAttribute(fields) {
   let firstUnused = '';
 
   ATTRIBUTES.forEach(a => {
-    if (!firstUnused && state[a] === undefined) firstUnused = a;
+    if (!firstUnused && fields[a] === undefined) firstUnused = a;
   });
 
   return firstUnused;
@@ -19,11 +19,12 @@ function firstUnusedAttribute(state) {
 export default function query(state = {}, action) {
   const copiedState = Object.assign({}, state);
   copiedState.fields = Object.assign({}, state.fields);
-  const addedField = action.attribute || firstUnusedAttribute(state);
+  let addedField = '';
   let newState = {};
 
   switch (action.type) {
     case ADD_FIELD:
+      addedField = action.attribute || firstUnusedAttribute(state.fields);
       if (addedField) {
         Object.assign(copiedState.fields, { [addedField]: '' });
         newState = copiedState;
@@ -34,6 +35,7 @@ export default function query(state = {}, action) {
       return newState;
 
     case UPDATE_FIELD:
+      addedField = action.attribute || firstUnusedAttribute(state.fields);
       Object.assign(copiedState.fields, { [addedField]: action.value });
       return copiedState;
 
