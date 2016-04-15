@@ -55,9 +55,11 @@ class Results extends React.Component {
                 result={r}
                 key={r.id || r.identifier.replace('/', '')}/>
             }) : <div>No Results to Display</div>}
+            <li>
+              <Pagination />
+            </li>
           </ul>
         </div>
-        <Pagination />
       </div>
     );
   }
