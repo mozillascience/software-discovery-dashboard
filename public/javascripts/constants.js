@@ -16,6 +16,7 @@ const ATTRIBUTES = Object.keys(ATTRIBUTES_DISPLAY);
 const SUPPORTED_REPOS = [
   'FigShare',
   'DataONE',
+  'DataCite',
 ];
 
 export { ATTRIBUTES_DISPLAY, ATTRIBUTES, SUPPORTED_REPOS };
