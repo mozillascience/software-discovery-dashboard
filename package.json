@@ -6,7 +6,7 @@
     "start": "gulp watch",
     "build": "gulp build",
     "serve": "gulp build && node dist/lib/server",
-    "test": "gulp test",
+    "test": "gulp lint && gulp test",
     "fullinstall": "npm install && bower install"
   },
   "dependencies": {
@@ -14,6 +14,9 @@
     "express": "~4.13.1",
     "jade": "~1.11.0",
     "jsonfile": "^2.2.3",
+    "lodash": "^4.5.1",
+    "moment": "^2.12.0",
+    "morgan": "~1.6.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.1",
@@ -21,9 +24,7 @@
     "redux": "^3.3.1",
     "redux-thunk": "^2.0.1",
     "request": "^2.65.0",
-    "serve-favicon": "~2.3.0",
-    "morgan": "~1.6.1",
-    "lodash": "^4.5.1"
+    "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
@@ -34,6 +35,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.7.2",
     "babelify": "^7.2.0",
+    "bower": "^1.7.9",
     "browserify": "^13.0.0",
     "eslint-config-airbnb": "^6.0.2",
     "eslint-plugin-react": "^4.1.0",

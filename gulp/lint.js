@@ -3,9 +3,10 @@ import eslint from 'gulp-eslint';
 import paths from './util/paths';
 
 const config = {
-  extends: "airbnb",
-  plugins: [ "react" ],
-  env: { es6: true }
+  extends: 'airbnb',
+  plugins: [ 'react' ],
+  env: { es6: true },
+  rules: {'no-console': 0, 'prefer-template': 0},
 }
 
 gulp.task('lint', () => {
