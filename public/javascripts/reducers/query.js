@@ -1,11 +1,16 @@
-import { ADD_FIELD, REMOVE_FIELD, UPDATE_FIELD } from '../actions/query';
 import { ATTRIBUTES } from '../constants';
+import {
+  ADD_FIELD,
+  REMOVE_FIELD,
+  UPDATE_FIELD,
+  CHANGE_PAGE,
+} from '../actions/query';
 
-function firstUnusedAttribute(state) {
+function firstUnusedAttribute(fields) {
   let firstUnused = '';
 
   ATTRIBUTES.forEach(a => {
-    if (!firstUnused && state[a] === undefined) firstUnused = a;
+    if (!firstUnused && fields[a] === undefined) firstUnused = a;
   });
 
   return firstUnused;
@@ -13,19 +18,33 @@ function firstUnusedAttribute(state) {
 
 export default function query(state = {}, action) {
   const copiedState = Object.assign({}, state);
-  const addedField = action.attribute || firstUnusedAttribute(state);
+  copiedState.fields = Object.assign({}, state.fields);
+  let addedField = '';
+  let newState = {};
 
   switch (action.type) {
     case ADD_FIELD:
-      return addedField ?
-        Object.assign(copiedState, { [addedField]: '' }) : state;
+      addedField = action.attribute || firstUnusedAttribute(state.fields);
+      if (addedField) {
+        Object.assign(copiedState.fields, { [addedField]: '' });
+        newState = copiedState;
+      } else {
+        newState = state;
+      }
+
+      return newState;
 
     case UPDATE_FIELD:
-      return Object.assign(copiedState, { [action.attribute]: action.value });
+      addedField = action.attribute || firstUnusedAttribute(state.fields);
+      Object.assign(copiedState.fields, { [addedField]: action.value });
+      return copiedState;
 
     case REMOVE_FIELD:
-      delete copiedState[action.attribute];
+      delete copiedState.fields[action.attribute];
       return copiedState;
+
+    case CHANGE_PAGE:
+      return Object.assign(copiedState, { page: action.page });
 
     default:
       return state;

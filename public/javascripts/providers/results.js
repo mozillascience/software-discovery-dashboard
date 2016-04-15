@@ -1,13 +1,13 @@
 import { normalizeCommaSeparated } from '../util/stringUtils';
 
-function getQueryParams(query) {
-  return Object.keys(query).map(attr => {
+function getQueryParams(fields) {
+  return Object.keys(fields).map(attr => {
     let param = '';
 
     if (attr === 'keywords') {
-      param = 'keywords[]=' + normalizeCommaSeparated(query.keywords);
+      param = 'keywords[]=' + normalizeCommaSeparated(fields.keywords);
     } else {
-      param = attr + '=' + query[attr];
+      param = attr + '=' + fields[attr];
     }
 
     return param;
@@ -17,9 +17,10 @@ function getQueryParams(query) {
 function getQueryUrl(source, query) {
   const baseUrl = '/';
   const src = source + '/search?';
-  const params = getQueryParams(query);
+  const params = getQueryParams(query.fields);
+  const page = '&page=' + query.page;
 
-  return baseUrl + src + params;
+  return baseUrl + src + params + page;
 }
 
 export function queryForResults(source, query, callback) {

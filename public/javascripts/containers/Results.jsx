@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Result from '../components/Result';
+import Pagination from './Pagination';
 import { findKey } from '../util/objectUtils';
 import { normalizeCommaSeparated } from '../util/stringUtils';
 import { performQuery } from '../actions/results';
@@ -21,12 +22,20 @@ class Results extends React.Component {
     this.props.dispatch(performQuery(repo, this.props.query));
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.query.page !== this.props.query.page) {
+      const repo = findKey(newProps.repo, true);
+      this.props.dispatch(performQuery(repo, newProps.query));
+    }
+  }
+
   render() {
+
     // TODO this will change when querying multiple sources is supported
     const queryInputString =
       'sources:' + findKey(this.props.repo, true) + ' ' +
-      Object.keys(this.props.query).map(a => {
-        return a + ':' + normalizeCommaSeparated(this.props.query[a])
+      Object.keys(this.props.query.fields).map(a => {
+        return a + ':' + normalizeCommaSeparated(this.props.query.fields[a])
       }).join(' ');
 
     return (
@@ -48,6 +57,7 @@ class Results extends React.Component {
             }) : <div>No Results to Display</div>}
           </ul>
         </div>
+        <Pagination />
       </div>
     );
   }

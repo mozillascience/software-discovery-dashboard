@@ -1,6 +1,7 @@
 export const ADD_FIELD = 'ADD_FIELD';
 export const REMOVE_FIELD = 'REMOVE_FIELD';
 export const UPDATE_FIELD = 'UPDATE_FIELD';
+export const CHANGE_PAGE = 'CHANGE_PAGE';
 
 export function addField(attribute) {
   return dispatch => dispatch({
@@ -21,5 +22,12 @@ export function updateField(attribute, value) {
     type: UPDATE_FIELD,
     attribute,
     value,
+  });
+}
+
+export function changePage(page) {
+  return dispatch => dispatch({
+    type: CHANGE_PAGE,
+    page,
   });
 }
