@@ -72,6 +72,10 @@ a {
     label.page-number{
       font-size:25px;
       font-weight:normal;
+      margin:0 10px;
+    }
+    label.page-number.selected-page{
+      font-weight:bold;
     }
     a:hover{
       background-color:transparent;

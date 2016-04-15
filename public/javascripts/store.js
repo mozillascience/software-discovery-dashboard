@@ -12,7 +12,10 @@ const INITIAL_STATE = {
     Zenodo: false,
   },
   query: {
-    keywords: '',
+    fields: {
+      keywords: '',
+    },
+    page: 1,
   },
   results: {},
 };

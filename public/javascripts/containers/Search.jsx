@@ -35,14 +35,14 @@ class Search extends React.Component {
   }
 
   render() {
-    const query = this.props.query;
+    const fields = this.props.query.fields;
     let count = 0;
 
-    this.fields = Object.keys(query).map(attribute => {
+    this.fields = Object.keys(fields).map(attribute => {
       return <SearchField
         key={attribute}
         attribute={attribute}
-        value={query[attribute]}
+        value={fields[attribute]}
         withDelete={count++ > 0}
         addField={this.addField}
         removeField={this.removeField}
