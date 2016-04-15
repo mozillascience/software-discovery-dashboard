@@ -3,7 +3,7 @@ import {
   ADD_FIELD,
   REMOVE_FIELD,
   UPDATE_FIELD,
-  CHANGE_PAGE
+  CHANGE_PAGE,
 } from '../actions/query';
 
 function firstUnusedAttribute(state) {
@@ -20,15 +20,18 @@ export default function query(state = {}, action) {
   const copiedState = Object.assign({}, state);
   copiedState.fields = Object.assign({}, state.fields);
   const addedField = action.attribute || firstUnusedAttribute(state);
+  let newState = {};
 
   switch (action.type) {
     case ADD_FIELD:
       if (addedField) {
         Object.assign(copiedState.fields, { [addedField]: '' });
-        return copiedState;
+        newState = copiedState;
       } else {
-        return state;
+        newState = state;
       }
+
+      return newState;
 
     case UPDATE_FIELD:
       Object.assign(copiedState.fields, { [addedField]: action.value });
