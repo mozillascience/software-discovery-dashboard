@@ -13,10 +13,21 @@ const ATTRIBUTES_DISPLAY = {
 
 const ATTRIBUTES = Object.keys(ATTRIBUTES_DISPLAY);
 
+const DATE_ATTR_DISPLAY = {
+  dateCreated: 'Created',
+  dateModified: 'Modified',
+  datePublished: 'Published',
+};
+
 const SUPPORTED_REPOS = [
   'FigShare',
   'DataONE',
   'DataCite',
 ];
 
-export { ATTRIBUTES_DISPLAY, ATTRIBUTES, SUPPORTED_REPOS };
+export {
+  ATTRIBUTES_DISPLAY,
+  ATTRIBUTES,
+  DATE_ATTR_DISPLAY,
+  SUPPORTED_REPOS
+};

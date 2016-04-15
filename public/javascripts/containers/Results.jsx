@@ -44,7 +44,7 @@ class Results extends React.Component {
             {this.props.results.articles ? this.props.results.articles.map(r => {
               return <Result
                 result={r}
-                key={r.id}/>
+                key={r.id || r.identifier.replace('/', '')}/>
             }) : <div>No Results to Display</div>}
           </ul>
         </div>
