@@ -43,7 +43,7 @@ class Result extends React.Component {
             </a>
           </h1>
           {source}
-          <div>{dateString}</div>
+          <div className="result-date">{dateString}</div>
           {description}
           {keywords}
         </div>
