@@ -22,7 +22,7 @@ class Result extends React.Component {
 
     const dateString = this.getDateString(result);
     const source = result.source ?
-      <a href={result.source} target="_blank">{result.source}</a> : '';
+      <label className="results-link-label">{result.source}</label> : '';
     const description = result.description ?
       <p className="result-description">{result.description}</p> : '';
     const keywords = result.keywords ?
