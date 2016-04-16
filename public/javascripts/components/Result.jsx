@@ -24,7 +24,7 @@ class Result extends React.Component {
     const source = result.source ?
       <label className="results-link-label">{result.source}</label> : '';
     const description = result.description ?
-      <p>{result.description}</p> : '';
+      <p className="result-description">{result.description}</p> : '';
     const keywords = result.keywords ?
       <ul className="keywords-list">
         {result.keywords.map(k => {

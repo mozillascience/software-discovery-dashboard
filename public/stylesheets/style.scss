@@ -88,6 +88,30 @@ a {
   .result-title-link {
     text-decoration: none;
   }
+  .result-description {
+    overflow: hidden;
+    position: relative; 
+    line-height: 1.3em;
+    max-height: 5.2em; 
+    text-align: justify;  
+    margin-right: -1em;
+    padding-right: 1em;
+  }
+  .result-description:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .result-description:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: white;
+  }
   ul{
     list-style-type:none;
     &.results-list{
