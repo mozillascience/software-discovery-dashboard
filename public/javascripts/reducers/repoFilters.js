@@ -3,7 +3,6 @@ import { SELECT_REPO, DESELECT_REPO } from '../actions/repoFilter';
 export default function repoFilter(state = {}, action) {
   // TODO temporary until querying over multiple sources is supported
   const allDeselected = {
-    DataCite: false,
     GitHub: false,
     DataONE: false,
     BitBucket: false,

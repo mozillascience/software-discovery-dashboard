@@ -22,7 +22,7 @@ const DATE_ATTR_DISPLAY = {
 const SUPPORTED_REPOS = [
   'FigShare',
   'DataONE',
-  'DataCite',
+  'GitHub',
 ];
 
 export {
