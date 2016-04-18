@@ -7,6 +7,8 @@ class SearchField extends React.Component {
     super();
 
     this._onChange = this._onChange.bind(this);
+    this.removeField = this.removeField.bind(this);
+    this.addField = this.addField.bind(this);
   }
 
   componentWillMount() {
@@ -18,40 +20,60 @@ class SearchField extends React.Component {
   _onChange(e) {
     this.props.removeField(this.state.selectedAttribute);
     this.props.addField(e.target.value);
-    this.setState({selectedAttribute: e.target.value});
+    this.setState({ selectedAttribute: e.target.value });
   }
 
   value() {
     return this.refs.searchInput.value;
   }
 
-  // TODO this function and the interactions it performs are quite ugly,
-  // could do with a good kneading
+  removeField() {
+    this.props.removeField(this.state.selectedAttribute);
+  }
+
+  addField() {
+    this.props.addField(null);
+  }
+
   render() {
     return (
       <div>
         <div className="select-borderless">
-          <select className="attribute-select"
-              value={this.state.selectedAttribute}
-              onChange={this._onChange}>
-            {ATTRIBUTES.map(k => {
-              return <option key={k} value={k}>{ATTRIBUTES_DISPLAY[k]}</option>
-            })}
-          </select><i className="fa fa-caret-down"></i>
+          <select
+            className="attribute-select"
+            value={this.state.selectedAttribute}
+            onChange={this._onChange}
+          >
+            {ATTRIBUTES.map(k =>
+              <option key={k} value={k}>{ATTRIBUTES_DISPLAY[k]}</option>
+            )}
+          </select>
+          <i className="fa fa-caret-down"></i>
         </div>
+
         <input type="text" className="search-field" ref="searchInput"></input>
+
         {this.props.withDelete ?
-          <button className="pure-button remove-button"
-            onClick={
-              this.props.removeField.bind(this, this.state.selectedAttribute)
-            }>-</button> : ''}
-        <button className="pure-button add-button"
-                onClick={this.props.addField.bind(this, null)}>+</button>
-        
+          <button
+            className="pure-button remove-button"
+            onClick={this.props.removeField}
+          >-</button> : ''}
+
+        <button
+          className="pure-button add-button"
+          onClick={this.props.addField}
+        >+</button>
       </div>
     );
   }
 
 }
+
+SearchField.propTypes = {
+  attribute: React.PropTypes.string,
+  removeField: React.PropTypes.func,
+  addField: React.PropTypes.func,
+  withDelete: React.PropTypes.bool,
+};
 
 export default SearchField;
