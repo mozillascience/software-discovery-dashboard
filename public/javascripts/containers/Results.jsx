@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import Result from '../components/Result';
 import Pagination from './Pagination';
@@ -30,13 +30,12 @@ class Results extends React.Component {
   }
 
   render() {
-
     // TODO this will change when querying multiple sources is supported
     const queryInputString =
       'sources:' + findKey(this.props.repo, true) + ' ' +
-      Object.keys(this.props.query.fields).map(a => {
-        return a + ':' + normalizeCommaSeparated(this.props.query.fields[a])
-      }).join(' ');
+      Object.keys(this.props.query.fields).map(a =>
+        a + ':' + normalizeCommaSeparated(this.props.query.fields[a])
+      ).join(' ');
 
     return (
       <div className="results-container">
@@ -45,16 +44,18 @@ class Results extends React.Component {
             <input type="text"
               className="results-query-input"
               defaultValue={queryInputString}
-              ref="results-query-input"/>
+              ref="results-query-input"
+            />
           </fieldset>
         </form>
         <div className="results">
           <ul className="results-list">
-            {this.props.results.articles ? this.props.results.articles.map(r => {
-              return <Result
+            {this.props.results.articles ? this.props.results.articles.map(r =>
+              <Result
                 result={r}
-                key={r.id || r.identifier.replace('/', '')}/>
-            }) : <div>No Results to Display</div>}
+                key={r.id || r.identifier.replace('/', '')}
+              />
+            ) : <div>No Results to Display</div>}
             <li>
               <Pagination />
             </li>
@@ -64,5 +65,12 @@ class Results extends React.Component {
     );
   }
 }
+
+Results.propTypes = {
+  repo: React.PropTypes.object,
+  query: React.PropTypes.object,
+  results: React.PropTypes.object,
+  dispatch: React.PropTypes.func,
+};
 
 export default connect(mapStateToProps)(Results);
