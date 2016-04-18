@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import { SUPPORTED_REPOS } from '../constants';
 
@@ -11,12 +9,12 @@ class RepoFilterButton extends React.Component {
     this.onClick = this.onClick.bind(this);
   }
 
-  repoUnsupported(repo) {
-    return SUPPORTED_REPOS.indexOf(repo) === -1;
-  }
-
   onClick() {
     this.props.onClick(this.props.repo);
+  }
+
+  repoUnsupported() {
+    return SUPPORTED_REPOS.indexOf(this.props.repo) === -1;
   }
 
   render() {
@@ -26,15 +24,21 @@ class RepoFilterButton extends React.Component {
     return (
       <button className={btnClassName}
         type="button"
-        style={{'outline':'none'}}
+        style={{ outline: 'none' }}
         onClick={this.onClick}
-        disabled={this.repoUnsupported(this.props.repo)}
+        disabled={this.repoUnsupported}
       >
         {this.props.repo}
       </button>
-    )
+    );
   }
 
 }
+
+RepoFilterButton.propTypes = {
+  onClick: React.PropTypes.func,
+  repo: React.PropTypes.object,
+  selected: React.PropTypes.bool,
+};
 
 export default RepoFilterButton;
