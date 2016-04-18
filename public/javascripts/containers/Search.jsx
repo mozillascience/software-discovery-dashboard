@@ -20,7 +20,7 @@ class Search extends React.Component {
     this.removeField = this.removeField.bind(this);
   }
 
-  search(e) {
+  search() {
     Object.keys(this.refs).forEach(f => {
       this.props.dispatch(updateField(f, this.refs[f].value()));
     });
@@ -38,24 +38,26 @@ class Search extends React.Component {
     const fields = this.props.query.fields;
     let count = 0;
 
-    this.fields = Object.keys(fields).map(attribute => {
-      return <SearchField
+    this.fields = Object.keys(fields).map(attribute =>
+      <SearchField
         key={attribute}
         attribute={attribute}
         value={fields[attribute]}
         withDelete={count++ > 0}
         addField={this.addField}
         removeField={this.removeField}
-        ref={attribute}/>
-    });
+        ref={attribute}
+      />
+    );
 
     return (
       <div>
         {this.fields}
         <Link to="/results">
           <button
-              className="pure-button search-button"
-              onClick={this.search}>
+            className="pure-button search-button"
+            onClick={this.search}
+          >
             Search
           </button>
         </Link>
@@ -64,5 +66,10 @@ class Search extends React.Component {
   }
 
 }
+
+Search.propTypes = {
+  dispatch: React.PropTypes.func,
+  query: React.PropTypes.object,
+};
 
 export default connect(mapStateToProps)(Search);
