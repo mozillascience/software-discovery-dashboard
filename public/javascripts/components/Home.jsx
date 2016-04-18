@@ -1,11 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import RepoFilter from './RepoFilter';
-import Search from './Search';
-
-function mapStateToProps(state) {
-  return {};
-}
+import RepoFilter from '../containers/RepoFilter';
+import Search from '../containers/Search';
 
 class Home extends React.Component {
 
@@ -31,4 +26,4 @@ class Home extends React.Component {
 
 }
 
-export default connect(mapStateToProps)(Home);
+export default Home;
