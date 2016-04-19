@@ -18,15 +18,17 @@ class RepoFilterButton extends React.Component {
   }
 
   render() {
+    const disabled = this.repoUnsupported();
     const btnClassName = this.props.selected ?
       'btn btn-default active' : 'btn btn-default';
 
     return (
+
       <button className={btnClassName}
         type="button"
         style={{ outline: 'none' }}
         onClick={this.onClick}
-        disabled={this.repoUnsupported}
+        disabled={disabled}
       >
         {this.props.repo}
       </button>
@@ -37,7 +39,7 @@ class RepoFilterButton extends React.Component {
 
 RepoFilterButton.propTypes = {
   onClick: React.PropTypes.func,
-  repo: React.PropTypes.object,
+  repo: React.PropTypes.string,
   selected: React.PropTypes.bool,
 };
 
