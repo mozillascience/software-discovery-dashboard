@@ -31,11 +31,11 @@ class Results extends React.Component {
 
   render() {
     // TODO this will change when querying multiple sources is supported
-    const queryInputString =
-      'sources:' + findKey(this.props.repo, true) + ' ' +
-      Object.keys(this.props.query.fields).map(a =>
-        a + ':' + normalizeCommaSeparated(this.props.query.fields[a])
-      ).join(' ');
+    const sources = `sources:${findKey(this.props.repo, true)}`;
+    const fields = Object.keys(this.props.query.fields).map(a =>
+      `${a}:${normalizeCommaSeparated(this.props.query.fields[a])}`
+    ).join(' ');
+    const queryInputString = `${sources} ${fields}`;
 
     return (
       <div className="results-container">
