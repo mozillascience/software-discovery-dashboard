@@ -30,7 +30,6 @@ a {
   width:100%;
   min-height:68%;
   display: flex;
-  align-items: center;
   justify-content: center;
   //overflow:auto;
 
@@ -46,9 +45,17 @@ a {
     max-height:50%;
     display:block;
   }
+  div.result{
+    width:80%;
+  }
+  div.results-container{
+    min-height:1500px;
+  }
   .results-query-summary{
+    float:left;
     margin:25px 0 40px 40px;
     font-size:1.5em;
+    width:50%;
     max-width:50%;
   }
   .results-query-input{
@@ -115,9 +122,8 @@ a {
   ul{
     list-style-type:none;
     &.results-list{
-      //background-color: #eee;
+      clear:both;
       min-width:20%;
-      max-width:80%;
       li{
         label.results-link-label{
           color: #259998;

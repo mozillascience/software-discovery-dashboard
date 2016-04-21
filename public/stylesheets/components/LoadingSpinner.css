@@ -137,7 +137,7 @@
 }
 
 /* custom style */
-.la-ball-atom { margin-left: 25%; }
+.la-ball-atom { margin: 30px 0 0 15px; float: left; }
 .la-ball-atom > div:nth-child(1) { background: #F0764B; }
 .la-ball-atom > div:nth-child(2) { color: #26AAE1; }
 .la-ball-atom > div:nth-child(3) { color: #AEB960; }

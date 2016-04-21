@@ -67,7 +67,7 @@ class Results extends React.Component {
     );
   }
 
-  render() {
+  renderResultsQuerySummary() {
     // TODO this will change when querying multiple sources is supported
     const queryInputString =
       'sources:' + findKey(this.props.repo, true) + ' ' +
@@ -76,15 +76,21 @@ class Results extends React.Component {
       }).join(' ');
 
     return (
+      <form className="pure-form results-query-summary">
+        <fieldset>
+          <input type="text"
+            className="results-query-input"
+            defaultValue={queryInputString}
+            ref="results-query-input"/>
+        </fieldset>
+      </form>
+    );
+  }
+
+  render() {
+    return (
       <div className="results-container">
-        <form className="pure-form results-query-summary">
-          <fieldset>
-            <input type="text"
-              className="results-query-input"
-              defaultValue={queryInputString}
-              ref="results-query-input"/>
-          </fieldset>
-        </form>
+        {this.renderResultsQuerySummary()}
         {this.state.loading ? this.renderLoading() : this.renderResults()}
       </div>
     );
