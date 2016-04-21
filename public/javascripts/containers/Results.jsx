@@ -36,11 +36,11 @@ class Results extends React.Component {
 
   componentWillReceiveProps(newProps) {
     if (newProps.query.page !== this.props.query.page) {
-      this.setState({loading: true});
+      this.setState({ loading: true });
       const repo = findKey(newProps.repo, true);
       this.props.dispatch(performQuery(repo, newProps.query));
     } else {
-      this.setState({loading: false});
+      this.setState({ loading: false });
     }
   }
 
@@ -53,11 +53,12 @@ class Results extends React.Component {
       <div>
         <div className="results">
           <ul className="results-list">
-            {this.props.results.articles.map(r => {
-              return <Result
+            {this.props.results.articles.map(r =>
+              <Result
                 result={r}
-                key={r.id || r.identifier.replace('/', '')}/>
-            })}
+                key={r.id || r.identifier.replace('/', '')}
+              />
+            )}
             <li>
               <Pagination />
             </li>
@@ -69,11 +70,11 @@ class Results extends React.Component {
 
   renderResultsQuerySummary() {
     // TODO this will change when querying multiple sources is supported
-    const queryInputString =
-      'sources:' + findKey(this.props.repo, true) + ' ' +
-      Object.keys(this.props.query.fields).map(a => {
-        return a + ':' + normalizeCommaSeparated(this.props.query.fields[a])
-      }).join(' ');
+    const sources = `sources:${findKey(this.props.repo, true)} `;
+    const fields = Object.keys(this.props.query.fields).map(a =>
+      `${a}:${normalizeCommaSeparated(this.props.query.fields[a])}`
+    ).join(' ');
+    const queryInputString = sources + fields;
 
     return (
       <form className="pure-form results-query-summary">
@@ -81,7 +82,8 @@ class Results extends React.Component {
           <input type="text"
             className="results-query-input"
             defaultValue={queryInputString}
-            ref="results-query-input"/>
+            ref="results-query-input"
+          />
         </fieldset>
       </form>
     );
