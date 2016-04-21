@@ -5,9 +5,9 @@ function getQueryParams(fields) {
     let param = '';
 
     if (attr === 'keywords') {
-      param = 'keywords[]=' + normalizeCommaSeparated(fields.keywords);
+      param = `keywords[]=${normalizeCommaSeparated(fields.keywords)}`;
     } else {
-      param = attr + '=' + fields[attr];
+      param = `${attr}=${fields[attr]}`;
     }
 
     return param;
@@ -16,9 +16,9 @@ function getQueryParams(fields) {
 
 function getQueryUrl(source, query) {
   const baseUrl = '/';
-  const src = source + '/search?';
+  const src = `${source}/search?`;
   const params = getQueryParams(query.fields);
-  const page = '&page=' + query.page;
+  const page = `&page=${query.page}`;
 
   return baseUrl + src + params + page;
 }

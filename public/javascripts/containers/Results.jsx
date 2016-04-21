@@ -1,4 +1,4 @@
- import React from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import Result from '../components/Result';
 import Pagination from './Pagination';
@@ -96,5 +96,12 @@ class Results extends React.Component {
     );
   }
 }
+
+Results.propTypes = {
+  repo: React.PropTypes.object,
+  query: React.PropTypes.object,
+  results: React.PropTypes.object,
+  dispatch: React.PropTypes.func,
+};
 
 export default connect(mapStateToProps)(Results);
