@@ -85,6 +85,10 @@ class Results extends React.Component {
             ref="results-query-input"
           />
         </fieldset>
+        <button
+          className="pure-button pure-button-primary result-search-button">
+          <i className="fa fa-search"></i>
+        </button>
       </form>
     );
   }
