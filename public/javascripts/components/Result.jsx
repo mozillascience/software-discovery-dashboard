@@ -8,7 +8,7 @@ class Result extends React.Component {
 
     ['dateModified', 'dateCreated', 'datePublished'].forEach(d => {
       if (result[d] && result[d].length > 4) {
-        const attr = DATE_ATTR_DISPLAY[d] + ': ';
+        const attr = `${DATE_ATTR_DISPLAY[d]}: `;
         dateString = attr + moment(result[d]).format('MMM Do, YYYY');
       }
     });
