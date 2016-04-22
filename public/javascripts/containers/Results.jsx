@@ -31,8 +31,11 @@ class Results extends React.Component {
 
     this.state = {
       loading: true,
-      needsReload: false,
     };
+
+    // A flag that doesn't affect rendering in a React way, so leaving it out
+    // of this.state
+    this.needsReload = false;
   }
 
   componentWillMount() {
@@ -42,8 +45,9 @@ class Results extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (this.state.needsReload) {
-      this.setState({ loading: true, needsReload: false });
+    if (this.needsReload) {
+      this.setState({ loading: true });
+      this.needsReload = false;
       const repo = findKey(newProps.repo, true);
       this.props.dispatch(performQuery(repo, newProps.query));
     } else {
@@ -58,11 +62,11 @@ class Results extends React.Component {
     // assumes one repo selected at a time
     this.props.dispatch(selectRepo(repoQuery.repo));
     this.props.dispatch(replaceQuery(repoQuery.query));
-    this.setState({ needsReload: true });
+    this.needsReload = true;
   }
 
   pageChanged() {
-    this.setState({ needsReload: true });
+    this.needsReload = true;
   }
 
   renderLoading() {
