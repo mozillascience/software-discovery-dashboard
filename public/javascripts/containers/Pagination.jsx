@@ -43,6 +43,7 @@ class Pagination extends React.Component {
     for (let i = 1; i <= 10; i++) {
       const classes = (this.props.query.page === i ?
         'page-number selected-page' : 'page-number');
+
       pages.push(
         <PaginationLabel key={i}
           number={i}
