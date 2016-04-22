@@ -12,7 +12,7 @@ export default {
   source: {
     public: {
       html: './public/*.html',
-      stylesheets: './public/stylesheets/**/*.scss',
+      stylesheets: './public/stylesheets/**/*.@(css|scss)',
       javascripts: './public/javascripts/**/*.@(js|jsx)',
       jsxMain: './public/javascripts/app.jsx',
       images: './public/images/**/*'
