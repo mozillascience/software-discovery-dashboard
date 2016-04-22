@@ -3,6 +3,7 @@ import {
   ADD_FIELD,
   REMOVE_FIELD,
   UPDATE_FIELD,
+  REPLACE_QUERY,
   CHANGE_PAGE,
 } from '../actions/query';
 
@@ -42,6 +43,9 @@ export default function query(state = {}, action) {
     case REMOVE_FIELD:
       delete copiedState.fields[action.attribute];
       return copiedState;
+
+    case REPLACE_QUERY:
+      return action.query;
 
     case CHANGE_PAGE:
       return Object.assign(copiedState, { page: action.page });

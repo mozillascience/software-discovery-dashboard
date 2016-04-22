@@ -1,6 +1,7 @@
 export const ADD_FIELD = 'ADD_FIELD';
 export const REMOVE_FIELD = 'REMOVE_FIELD';
 export const UPDATE_FIELD = 'UPDATE_FIELD';
+export const REPLACE_QUERY = 'REPLACE_QUERY';
 export const CHANGE_PAGE = 'CHANGE_PAGE';
 
 export function addField(attribute) {
@@ -22,6 +23,13 @@ export function updateField(attribute, value) {
     type: UPDATE_FIELD,
     attribute,
     value,
+  });
+}
+
+export function replaceQuery(query) {
+  return dispatch => dispatch({
+    type: REPLACE_QUERY,
+    query,
   });
 }
 
