@@ -21,10 +21,11 @@ To run the Software Discovery Dashboard locally, run these steps:
 
 ## Style Guide
 This project follows the [Airbnb Style Guide](https://github.com/airbnb/javascript).
+Included is a linter configured to enforce this style guide. It is run alongside
+unit tests with `npm test` but can also be run alone with `gulp lint`.
 
 ##Communication
-Gitter:  https://gitter.im/mozillascience/SoftwareDiscoveryDashboard  
-Channel: #SoftwareDiscoveryDashboard
+Join the conversation on [Gitter](https://gitter.im/mozillascience/SoftwareDiscoveryDashboard).
 
 ##Project Leadership
 Technical Lead : Luke Coy

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { changePage } from '../actions/query';
-import { performQuery } from '../actions/results';
+import PaginationLabel from '../components/PaginationLabel';
 
 function mapStateToProps(state) {
   return {
@@ -36,11 +36,17 @@ class Pagination extends React.Component {
 
   render() {
     const pages = [];
-    for (var i = 1; i <= 10; i++) {
-      const classes = 'page-number ' + (this.props.query.page === i ?
-        'selected-page' : '');
-      pages.push(<label onClick={this.set.bind(this, i)}
-                        className={classes} key={i}>{i}</label>);
+    for (let i = 1; i <= 10; i++) {
+      const classes = (this.props.query.page === i ?
+        'page-number selected-page' : 'page-number');
+
+      pages.push(
+        <PaginationLabel key={i}
+          number={i}
+          onClick={this.set}
+          classes={classes}
+        />
+      );
     }
 
     return (
@@ -53,5 +59,11 @@ class Pagination extends React.Component {
   }
 
 }
+
+Pagination.propTypes = {
+  dispatch: React.PropTypes.func,
+  repo: React.PropTypes.object,
+  query: React.PropTypes.object,
+};
 
 export default connect(mapStateToProps)(Pagination);
