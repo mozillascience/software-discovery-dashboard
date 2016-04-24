@@ -1,5 +1,10 @@
 import { normalizeCommaSeparated } from './stringUtils';
 import { findKey } from './objectUtils';
+import _ from 'lodash';
+
+export const ERRORS = {
+  AT_LEAST_ONE_FIELD: 'AT_LEAST_ONE_FIELD',
+};
 
 function getQueryParams(fields) {
   return Object.keys(fields).map(attr => {
@@ -16,10 +21,14 @@ function getQueryParams(fields) {
 }
 
 function getQueryUrl(source, query) {
+  if (_.isEmpty(query.fields)) {
+    return ERRORS.AT_LEAST_ONE_FIELD;
+  }
+
   const baseUrl = '/';
   const src = `${source}/search?`;
   const params = getQueryParams(query.fields);
-  const page = `&page=${query.page}`;
+  const page = `&page=${query.page || 1}`;
 
   return baseUrl + src + params + page;
 }
