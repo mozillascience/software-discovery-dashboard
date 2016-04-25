@@ -38,7 +38,7 @@ function getQueryUrl(source, query) {
 function getArrayStringFromRepoQuery(repo, query) {
   // TODO this will change when querying multiple sources is supported
   const sources = `sources:${findKey(repo, true)}`;
-  const fieldsWithData = 
+  const fieldsWithData =
     _.filter(Object.keys(query.fields), field => query.fields[field]);
   const fields = fieldsWithData.map(a =>
     `${a}:${normalizeCommaSeparated(query.fields[a])}`
