@@ -20,8 +20,12 @@ class Pagination extends React.Component {
     this.increment = this.increment.bind(this);
   }
 
+
   set(page) {
     this.props.dispatch(changePage(page));
+    if (this.props.onPageChanged) {
+      this.props.onPageChanged();
+    }
   }
 
   decrement() {
@@ -64,6 +68,7 @@ Pagination.propTypes = {
   dispatch: React.PropTypes.func,
   repo: React.PropTypes.object,
   query: React.PropTypes.object,
+  onPageChanged: React.PropTypes.func,
 };
 
 export default connect(mapStateToProps)(Pagination);
