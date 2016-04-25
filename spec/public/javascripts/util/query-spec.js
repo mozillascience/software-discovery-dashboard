@@ -21,4 +21,46 @@ describe('query util unit tests', () => {
 
     expect(queryUrl).toBe('/DataONE/search?keywords[]=biology&page=1');
   });
+
+  it('omits empty fields', () => {
+    const source = 'DataONE';
+    const query = {
+      page: 1,
+      fields: {
+        keywords: 'biology,mosquito',
+        author: '',
+        datePublished: '',
+      },
+    };
+    const queryUrl = getQueryUrl(source, query);
+
+    expect(queryUrl).toBe('/DataONE/search?keywords[]=biology,mosquito&page=1');
+  });
+
+  it('omits keywords if empty', () => {
+    const source = 'DataONE';
+    const query = {
+      page: 1,
+      fields: {
+        author: 'Seuss',
+      },
+    };
+    const queryUrl = getQueryUrl(source, query);
+
+    expect(queryUrl).toBe('/DataONE/search?author=Seuss&page=1');
+  });
+
+  it('encodes spaces to be URI-safe', () => {
+    const source = 'DataONE';
+    const query = {
+      page: 1,
+      fields: {
+        author: 'Dr Seuss',
+      },
+    };
+    const queryUrl = getQueryUrl(source, query);
+
+    expect(queryUrl).toBe('/DataONE/search?author=Dr%20Seuss&page=1');
+  });
+
 });
