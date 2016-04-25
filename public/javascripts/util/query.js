@@ -7,13 +7,15 @@ export const ERRORS = {
 };
 
 function getQueryParams(fields) {
-  return Object.keys(fields).map(attr => {
+  const fieldsWithData = _.filter(Object.keys(fields), field => fields[field]);
+
+  return fieldsWithData.map(field => {
     let param = '';
 
-    if (attr === 'keywords') {
+    if (field === 'keywords') {
       param = `keywords[]=${normalizeCommaSeparated(fields.keywords)}`;
     } else {
-      param = `${attr}=${fields[attr]}`;
+      param = `${field}=${fields[field]}`;
     }
 
     return param;
