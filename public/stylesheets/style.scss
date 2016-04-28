@@ -31,7 +31,15 @@ a {
   min-height:68%;
   display: flex;
   justify-content: center;
+  align-items:center;
   //overflow:auto;
+
+  img.sd-logo{
+    max-width:10%;
+    height:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
 
   div.main-content{
     width: 80%;
