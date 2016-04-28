@@ -17,7 +17,7 @@ To run the Software Discovery Dashboard locally, run these steps:
 
 1. Clone `git clone git@github.com:mozillascience/software-discovery-dashboard.git && cd software-discovery-dashboard`
 2. run `npm run fullinstall`
-3. run `npm start` and open up `http://localhost:3000/` in your favourite web browser!
+3. run `npm start` and open up `http://localhost:5000/` in your favourite web browser!
 
 ## Style Guide
 This project follows the [Airbnb Style Guide](https://github.com/airbnb/javascript).
