@@ -96,7 +96,7 @@ class Results extends React.Component {
               className="results-query-input"
               defaultValue={queryInputString}
               ref="results-query-input"
-              disabled={true}
+              disabled
             />
           </fieldset>
         </form>
