@@ -37,6 +37,7 @@ class Search extends React.Component {
   render() {
     const fields = this.props.query.fields;
     let count = 0;
+    console.log(this.props.query);
 
     this.fields = Object.keys(fields).map(attribute =>
       <SearchField

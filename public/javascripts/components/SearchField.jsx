@@ -51,7 +51,12 @@ class SearchField extends React.Component {
           <i className="fa fa-caret-down"></i>
         </div>
 
-        <input type="text" className="search-field" ref="searchInput"></input>
+        <input
+          type="text"
+          className="search-field"
+          ref="searchInput"
+          defaultValue={this.props.value}
+        ></input>
 
         {this.props.withDelete ?
           <button

@@ -58,11 +58,18 @@ a {
     width:50%;
     max-width:50%;
   }
+  .results-go-back-button{
+    float:left;
+    margin-left:0;
+    height:2em;
+    outline:none;
+  }
   .results-query-input{
     float:left;
     width:100%;
     height:2em;
     padding:0 10px;
+    outline:none;
   }
   .results-pagination{
     text-align: center;
