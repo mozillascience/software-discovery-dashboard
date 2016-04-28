@@ -76,6 +76,7 @@ class SearchField extends React.Component {
 
 SearchField.propTypes = {
   attribute: React.PropTypes.string,
+  value: React.PropTypes.string,
   removeField: React.PropTypes.func,
   addField: React.PropTypes.func,
   withDelete: React.PropTypes.bool,

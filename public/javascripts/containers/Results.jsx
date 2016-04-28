@@ -45,6 +45,11 @@ class Results extends React.Component {
     }
   }
 
+  goBack(e) {
+    e.preventDefault();
+    window.history.back();
+  }
+
   renderLoading() {
     return <LoadingSpinner />;
   }
@@ -67,11 +72,6 @@ class Results extends React.Component {
         </div>
       </div>
     );
-  }
-
-  goBack(e) {
-    e.preventDefault();
-    window.history.back();
   }
 
   renderResultsQuerySummary() {
