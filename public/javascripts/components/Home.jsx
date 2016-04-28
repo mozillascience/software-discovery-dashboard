@@ -6,7 +6,12 @@ function Home({ children }) {
   return (
     <div>
       <div className="text-center">
-        <img className="sd-logo" src="images/openSDLogo.png" width="1348px" height="1217px" alt="logo"/>
+        <img className="sd-logo"
+          src="images/openSDLogo.png"
+          width="1348px"
+          height="1217px"
+          alt="logo"
+        />
         <h1>Software Discovery Dashboard</h1>
       </div>
 
