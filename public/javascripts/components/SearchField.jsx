@@ -7,6 +7,7 @@ class SearchField extends React.Component {
     super();
 
     this._onChange = this._onChange.bind(this);
+    this._onTextInput = this._onTextInput.bind(this);
     this.removeField = this.removeField.bind(this);
     this.addField = this.addField.bind(this);
   }
@@ -21,6 +22,13 @@ class SearchField extends React.Component {
     this.props.removeField(this.state.selectedAttribute);
     this.props.addField(e.target.value);
     this.setState({ selectedAttribute: e.target.value });
+  }
+
+  _onTextInput(e) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      this.props.search();
+    }
   }
 
   value() {
@@ -55,6 +63,7 @@ class SearchField extends React.Component {
           type="text"
           className="search-field"
           ref="searchInput"
+          onKeyDown={this._onTextInput}
           defaultValue={this.props.value}
         ></input>
 
@@ -79,6 +88,7 @@ SearchField.propTypes = {
   value: React.PropTypes.string,
   removeField: React.PropTypes.func,
   addField: React.PropTypes.func,
+  search: React.PropTypes.func,
   withDelete: React.PropTypes.bool,
 };
 

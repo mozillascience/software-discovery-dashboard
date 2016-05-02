@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { addField, removeField, updateField } from '../actions/query';
@@ -16,14 +17,22 @@ class Search extends React.Component {
     super();
 
     this.search = this.search.bind(this);
+    this.searchEnter = this.searchEnter.bind(this);
     this.addField = this.addField.bind(this);
     this.removeField = this.removeField.bind(this);
   }
 
   search() {
-    Object.keys(this.refs).forEach(f => {
+    const fieldRefs = _.filter(Object.keys(this.refs), k =>
+      k !== 'searchButton');
+
+    fieldRefs.forEach(f => {
       this.props.dispatch(updateField(f, this.refs[f].value()));
     });
+  }
+
+  searchEnter() {
+    this.refs.searchButton.click();
   }
 
   addField(attribute) {
@@ -38,7 +47,7 @@ class Search extends React.Component {
     const fields = this.props.query.fields;
     let count = 0;
 
-    this.fields = Object.keys(fields).map(attribute =>
+    const searchFields = Object.keys(fields).map(attribute =>
       <SearchField
         key={attribute}
         attribute={attribute}
@@ -46,17 +55,19 @@ class Search extends React.Component {
         withDelete={count++ > 0}
         addField={this.addField}
         removeField={this.removeField}
+        search={this.searchEnter}
         ref={attribute}
       />
     );
 
     return (
       <div>
-        {this.fields}
+        {searchFields}
         <Link to="/results">
           <button
             className="pure-button search-button"
             onClick={this.search}
+            ref="searchButton"
           >
             Search
           </button>
