@@ -61,12 +61,12 @@ class SearchField extends React.Component {
         {this.props.withDelete ?
           <button
             className="pure-button remove-button"
-            onClick={this.props.removeField}
+            onClick={this.removeField}
           >-</button> : ''}
 
         <button
           className="pure-button add-button"
-          onClick={this.props.addField}
+          onClick={this.addField}
         >+</button>
       </div>
     );
