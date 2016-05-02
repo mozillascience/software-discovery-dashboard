@@ -27,6 +27,13 @@ unit tests with `npm test` but can also be run alone with `gulp lint`.
 ##Communication
 Join the conversation on [Gitter](https://gitter.im/mozillascience/SoftwareDiscoveryDashboard).
 
+##Contributing
+There are multiple ways to get involved in the project: open an issue, comment on open issues, join the conversation on Gitter (see Communication above), or fix an open issue, to name a few.
+
+Issues marked with the `help wanted` tag are a great place to start. They are smaller, generally straightforward bugs or
+enhancements meant to provide an easy introduction to the codebase while still contributing meaningful work. They may also be
+conversational issues where input is greatly appreciated.
+
 ##Project Leadership
 Technical Lead : Luke Coy
 
