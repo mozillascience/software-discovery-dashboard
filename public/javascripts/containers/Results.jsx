@@ -22,6 +22,7 @@ class Results extends React.Component {
 
     this.renderLoading = this.renderLoading.bind(this);
     this.renderResults = this.renderResults.bind(this);
+    this.goBack = this.goBack.bind(this);
 
     this.state = {
       loading: true,
@@ -42,6 +43,11 @@ class Results extends React.Component {
     } else {
       this.setState({ loading: false });
     }
+  }
+
+  goBack(e) {
+    e.preventDefault();
+    window.history.back();
   }
 
   renderLoading() {
@@ -77,15 +83,24 @@ class Results extends React.Component {
     const queryInputString = sources + fields;
 
     return (
-      <form className="pure-form results-query-summary">
-        <fieldset>
-          <input type="text"
-            className="results-query-input"
-            defaultValue={queryInputString}
-            ref="results-query-input"
-          />
-        </fieldset>
-      </form>
+      <div>
+        <form className="pure-form results-query-summary">
+          <button
+            className="pure-button results-go-back-button"
+            onClick={this.goBack}
+          >
+            <i className="fa fa-long-arrow-left"></i>
+          </button>
+          <fieldset>
+            <input type="text"
+              className="results-query-input"
+              defaultValue={queryInputString}
+              ref="results-query-input"
+              disabled
+            />
+          </fieldset>
+        </form>
+      </div>
     );
   }
 

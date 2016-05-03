@@ -51,17 +51,22 @@ class SearchField extends React.Component {
           <i className="fa fa-caret-down"></i>
         </div>
 
-        <input type="text" className="search-field" ref="searchInput"></input>
+        <input
+          type="text"
+          className="search-field"
+          ref="searchInput"
+          defaultValue={this.props.value}
+        ></input>
 
         {this.props.withDelete ?
           <button
             className="pure-button remove-button"
-            onClick={this.props.removeField}
+            onClick={this.removeField}
           >-</button> : ''}
 
         <button
           className="pure-button add-button"
-          onClick={this.props.addField}
+          onClick={this.addField}
         >+</button>
       </div>
     );
@@ -71,6 +76,7 @@ class SearchField extends React.Component {
 
 SearchField.propTypes = {
   attribute: React.PropTypes.string,
+  value: React.PropTypes.string,
   removeField: React.PropTypes.func,
   addField: React.PropTypes.func,
   withDelete: React.PropTypes.bool,

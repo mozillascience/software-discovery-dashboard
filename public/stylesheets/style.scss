@@ -31,7 +31,15 @@ a {
   min-height:68%;
   display: flex;
   justify-content: center;
+  align-items:center;
   //overflow:auto;
+
+  img.sd-logo{
+    max-width:10%;
+    height:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
 
   div.main-content{
     width: 80%;
@@ -58,11 +66,18 @@ a {
     width:50%;
     max-width:50%;
   }
+  .results-go-back-button{
+    float:left;
+    margin-left:0;
+    height:2em;
+    outline:none;
+  }
   .results-query-input{
     float:left;
     width:100%;
     height:2em;
     padding:0 10px;
+    outline:none;
   }
   .results-pagination{
     text-align: center;
@@ -101,7 +116,7 @@ a {
     line-height: 1.3em;
     max-height: 5.2em; 
     text-align: justify;  
-    margin-right: -1em;
+    margin: 0 -1em 0 0;
     padding-right: 1em;
   }
   .result-description:before {
@@ -141,7 +156,7 @@ a {
     }
     &.keywords-list{
       margin-left:-45px;
-      margin-top:-15px;
+      margin-top:-6px;
       float:left;
       margin-bottom:25px;
       li{
@@ -180,8 +195,8 @@ a {
     button.search-button{
       margin-top:20px;
       min-width: 150px;
-      background-color: #E9E9E9;
-
+      border:1px solid #a8bacc;
+      color:#333;
 
     }
     /* div.select-borderless{
