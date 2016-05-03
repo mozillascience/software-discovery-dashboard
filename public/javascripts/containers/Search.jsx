@@ -23,10 +23,9 @@ class Search extends React.Component {
   }
 
   search() {
-    const fieldRefs = _.filter(Object.keys(this.refs), k =>
-      k !== 'searchButton');
+    const fields = Object.keys(this.props.query.fields);
 
-    fieldRefs.forEach(f => {
+    fields.forEach(f => {
       this.props.dispatch(updateField(f, this.refs[f].value()));
     });
   }
