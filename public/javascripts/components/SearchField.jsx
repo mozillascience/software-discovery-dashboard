@@ -39,7 +39,8 @@ class SearchField extends React.Component {
     this.props.removeField(this.state.selectedAttribute);
   }
 
-  addField() {
+  addField(e) {
+    e.preventDefault();
     this.props.addField(null);
   }
 
