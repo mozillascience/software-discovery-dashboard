@@ -1,5 +1,4 @@
-import parseRepositories  from '../../../../lib/repository-mappers/datacite/parseRepositories';
-
+import parseRepositories  from '../../../../lib/repository-mappers/datacite/parseDataciteArticles';
 
 const dataciteDoc = require('./resources/dataciteDoc.json');
 const dataciteDocs = require('./resources/dataciteDocs.json');

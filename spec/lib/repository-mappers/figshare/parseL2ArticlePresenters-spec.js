@@ -46,4 +46,4 @@ describe('Fighshare L2 Article Presentor Parser Suite', () => {
     expect(convertedArticle.author[0]['@id']).toBe('http://orcid.org/0000-0002-4106-2545');
   })
 
-})
+});

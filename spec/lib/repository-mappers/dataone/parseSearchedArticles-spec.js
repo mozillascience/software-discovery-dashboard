@@ -1,4 +1,4 @@
-import parseSearchedArticles  from '../../../../lib/repository-mappers/dataone/parseSearchedArticles';
+import parseSearchedArticles  from '../../../../lib/repository-mappers/dataone/parseDataOneArticles';
 
 const dataoneArticles = require('./resources/dataoneArticles.json');
 const convertedArticles = parseSearchedArticles(dataoneArticles);
