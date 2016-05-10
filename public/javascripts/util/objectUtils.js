@@ -8,4 +8,16 @@ function findKey(obj, value) {
   return null;
 }
 
-export { findKey };
+function findAllKeys(obj, value) {
+  const keys = [];
+
+  for (const k in obj) {
+    if (obj[k] === value) {
+      keys.push(k);
+    }
+  }
+
+  return keys;
+}
+
+export { findKey, findAllKeys };

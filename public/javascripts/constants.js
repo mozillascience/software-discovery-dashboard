@@ -19,15 +19,25 @@ const DATE_ATTR_DISPLAY = {
   datePublished: 'Published',
 };
 
+const REPO_DISPLAY_NAMES = {
+  datacite: 'DataCite',
+  github: 'GitHub',
+  dataone: 'DataONE',
+  bitbucket: 'BitBucket',
+  figshare: 'FigShare',
+  zenodo: 'Zenodo',
+};
+
 const SUPPORTED_REPOS = [
-  'FigShare',
-  'DataONE',
-  'DataCite',
+  'figshare',
+  'dataone',
+  'zenodo',
 ];
 
 export {
   ATTRIBUTES_DISPLAY,
   ATTRIBUTES,
   DATE_ATTR_DISPLAY,
+  REPO_DISPLAY_NAMES,
   SUPPORTED_REPOS,
 };
