@@ -1,5 +1,9 @@
 import { normalizeCommaSeparated } from '../util/stringUtils';
 
+function getSourceParams(sources) {
+  return sources.map(s => `repos[]=${s}`).join('&');
+}
+
 function getQueryParams(fields) {
   return Object.keys(fields).map(attr => {
     let param = '';
@@ -14,17 +18,17 @@ function getQueryParams(fields) {
   }).join('&');
 }
 
-function getQueryUrl(source, query) {
-  const baseUrl = '/';
-  const src = `${source}/search?`;
+function getQueryUrl(sources, query) {
+  const baseUrl = '/search?';
+  const src = `${getSourceParams(sources)}&`;
   const params = getQueryParams(query.fields);
   const page = `&page=${query.page}`;
 
   return baseUrl + src + params + page;
 }
 
-export function queryForResults(source, query, callback) {
-  const url = getQueryUrl(source, query);
+export function queryForResults(sources, query, callback) {
+  const url = getQueryUrl(sources, query);
 
   const xmlHttp = new XMLHttpRequest();
   xmlHttp.onreadystatechange = () => {

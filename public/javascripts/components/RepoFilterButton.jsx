@@ -1,5 +1,5 @@
 import React from 'react';
-import { SUPPORTED_REPOS } from '../constants';
+import { REPO_DISPLAY_NAMES, SUPPORTED_REPOS } from '../constants';
 
 class RepoFilterButton extends React.Component {
 
@@ -30,7 +30,7 @@ class RepoFilterButton extends React.Component {
         onClick={this.onClick}
         disabled={disabled}
       >
-        {this.props.repo}
+        {REPO_DISPLAY_NAMES[this.props.repo]}
       </button>
     );
   }

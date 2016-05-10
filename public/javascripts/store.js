@@ -4,12 +4,12 @@ import thunk from 'redux-thunk';
 
 const INITIAL_STATE = {
   repoFilters: {
-    DataCite: false,
-    GitHub: false,
-    DataONE: true,
-    BitBucket: false,
-    FigShare: false,
-    Zenodo: false,
+    datacite: false,
+    github: false,
+    dataone: true,
+    bitbucket: false,
+    figshare: false,
+    zenodo: false,
   },
   query: {
     fields: {
