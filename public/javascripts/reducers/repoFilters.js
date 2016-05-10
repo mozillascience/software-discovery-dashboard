@@ -9,10 +9,8 @@ export default function repoFilter(state = {}, action) {
     case DESELECT_REPO:
       if (findAllKeys(state, true).length === 1) {
         return state;
-      } else {
-        return Object.assign({}, state, { [action.repo]: false });
       }
-
+      return Object.assign({}, state, { [action.repo]: false });
 
     default:
       return state;

@@ -23,9 +23,9 @@ function addResultsFailure(err) {
   };
 }
 
-export function performQuery(source, query) {
+export function performQuery(sources, query) {
   return dispatch => {
-    queryForResults(source, query, r => {
+    queryForResults(sources, query, r => {
       dispatch(addResultsSuccess(r));
     }, err => {
       dispatch(addResultsFailure(err));
